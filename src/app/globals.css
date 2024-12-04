@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff,
+  --foreground: #171717
+}
+
+/* font size */
+
+
+
+.custom-tiny {
+  @apply text-sm sm:text-base md:text-lg;
+}
+
+.custom-small {
+  @apply text-base sm:text-lg md:text-xl;
+}
+
+.custom-base {
+  @apply  text-base leading-[28.5px] ;
+}
+
+
+
+.custom-h1{
+  @apply text-3xl sm:text-4xl md:text-5xl font-semibold;
+}
+
+.custom-h2 {
+  @apply text-2xl sm:text-3xl md:text-4xl mb-4 font-semibold ;
+}
+
+.custom-h3 {
+  @apply text-lg sm:text-xl md:text-2xl;
+}
+
+.custom-h4 {
+  @apply sm:text-lg md:text-xl;
+}
+
+.custom-h5 {
+  @apply text-lg;
+}
+
+
+
+
+
+/* section-padding */
+
+.py-section {
+  @apply py-12 sm:py-16 md:py-20 lg:py-24;
+}
+
+.px-section {
+  @apply px-4 sm:px-6 md:px-12 lg:px-32;
+}
+
+
+/* Global scrollbar styles for scrollable containers */
+.scrollable {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #8B8000 transparent; /* Thumb color and track color for Firefox */
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 6px; /* Set width for the scrollbar */
+  height: 6px; /* Set height for horizontal scrollbar */
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background for the track */
+  border-radius: 10px; /* Round corners for the track */
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #8B8000; /* Thumb color */
+  border-radius: 10px; /* Round corners for the thumb */
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #7a7000; /* Slightly darker thumb color when hovered */
+}
+
+.scrollable::-webkit-scrollbar-button {
+  display: none; /* Hide the arrows at both ends of the scrollbar */
+}
+
+.scrollable::-webkit-scrollbar-corner {
+  background: transparent; /* Ensure the corner area is transparent */
+}
+
+
+
