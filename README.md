@@ -1,5 +1,5 @@
-# IAM
 
+# IAM
 
 
 ## Getting started
@@ -91,3 +91,59 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+## ----------------------------------------------------------------------------------
+
+
+## Technologies used
+
+- **Next.js Framework**: A powerful React framework for building server-side rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Lucide-React**: A collection of open-source SVG icons for your React projects.
+- **Swiper**: A modern touch slider that works seamlessly with React.
+
+## Installation
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/iam.git
+   cd iam
+   ```
+
+2. **Install dependencies**:  
+ 
+   ```bash
+   npm install
+   
+  
+
+## Development
+
+To run the project locally in development mode, use the following command:
+
+```bash
+npm run dev
+```
+
+This will start the application at [http://localhost:3000](http://localhost:3000).
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+
