@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Underline from "@/assets/icons/underline.svg";
+import Underline from "@/app/assets/icons/underline.svg";
 
 const Browse_Header = ({ bg, heading }) => {
   const words = heading.split(" ");

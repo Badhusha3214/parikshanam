@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { mockFetchMembers } from "@/app/lib/members";
-import Search from "@/assets/icons/search.svg";
+import SearchIcon from "@/app/assets/icons/search.svg";
 import { LocationIcon } from "./ui/icons";
 
 export function SearchBar({ onSearchResults }) {
@@ -20,7 +20,7 @@ export function SearchBar({ onSearchResults }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 px-4 py-12 md:items-center  rounded-lg shadow bg-white">
       <div className="flex flex-1 gap-2 px-4 py-2 rounded-lg">
-        <Search />
+        <SearchIcon />
         <input
           type="text"
           placeholder="Search Member Name"

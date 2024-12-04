@@ -3,7 +3,7 @@ import { Suspense, useState } from "react";
 import Browse_Header from "@/app/components/browse-header";
 import { SearchBar } from "@/app/components/search-name-location";
 import { fetchAllMembers } from "@/app/lib/members";
-import { ProfileList } from "@/app/components/members/profiles-list";
+import { ProfileList } from "@/app/components/profiles-list";
 import {  usePagination } from "@/app/contexts/PaginationContext";
 
 
@@ -30,7 +30,7 @@ export default function Page() {
           <SearchBar onSearchResults={handleSearchResults} />
         </div>
         <Suspense fallback={<p>Loading members...</p>}>
-          <ProfileList profiles={filteredMembers} />
+          <ProfileList profiles={filteredMembers} profileType="members" />
         </Suspense>
       </main>
    

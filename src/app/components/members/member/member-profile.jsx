@@ -2,10 +2,10 @@
 
 
 import Button from "../../ui/Button";
-import LocationIcon from '@/assets/icons/location.svg';
-import PhoneIcon from '@/assets/icons/call.svg';
-import ShareIcon from '@/assets/icons/share.svg';
-import MessageIcon from '@/assets/icons/message.svg';
+import LocationIcon from '@/app/assets/icons/location.svg';
+import PhoneIcon from '@/app/assets/icons/call.svg';
+import ShareIcon from '@/app/assets/icons/share.svg';
+import MessageIcon from '@/app/assets/icons/message.svg';
 
 export default function ProfileCard({ member }) {
   const handlePhoneClick = () => {

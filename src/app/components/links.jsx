@@ -1,9 +1,9 @@
 import React from 'react'
-import InstaIcon from '@/assets/icons/instagram.svg'
-import LinkIcon from '@/assets/icons/linkedin.svg'
-import XIcon from '@/assets/icons/x.svg'
-// import DribbleIcon from '@/assets/icons/dribble.svg'
-import FbIcon from '@/assets/icons/facebook.svg'
+import InstaIcon from '@/app/assets/icons/instagram.svg'
+import LinkIcon from '@/app/assets/icons/linkedin.svg'
+import XIcon from '@/app/assets/icons/x.svg'
+// import DribbleIcon from '@/app/assets/icons/dribble.svg'
+import FbIcon from '@/app/assets/icons/facebook.svg'
 import Link from 'next/link'
 
 const Links = ({ description, links }) => {

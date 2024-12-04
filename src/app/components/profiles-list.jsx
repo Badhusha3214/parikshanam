@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LocationIcon } from "../ui/icons";
-import Pagination from "../pagination";
+import { LocationIcon } from "./ui/icons";
+import Pagination from "./pagination";
 
 export function ProfileList({ 
-  pagination,
-  onPageChange,
+  profileType,
   profiles, 
   cardClassName = "", 
   listClassName = "grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-6 " 
@@ -15,24 +14,24 @@ export function ProfileList({
       <ul className={listClassName}>
         {profiles.map((profile) => (
           <ProfileCard 
+            profileType ={profileType}
             key={profile.id} 
             profile={profile} 
             className={cardClassName}
           />
         ))}
       </ul>
-      <Pagination 
-        pagination = {pagination}
-        onPageChange = {onPageChange} />
+      <Pagination />
     </div>
   );
 }
 
 export function ProfileCard({ 
   profile, 
-  children 
+  profileType
 }) {
   return (
+    <Link  href={`/${profileType}/${profile.id}`}>
     <li className="p-4 border  rounded-lg shadow hover:shadow-md transition-shadow duration-300">
      
       <div className="relative  w-full aspect-[5/5] mb-4">
@@ -58,6 +57,7 @@ export function ProfileCard({
         
       </div>
     </li>
+    </Link>
   );
 }
 
