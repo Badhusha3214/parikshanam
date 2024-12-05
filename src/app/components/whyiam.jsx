@@ -8,7 +8,7 @@ const WhyIAM = () => {
                 <h1 className='text-6xl font-bold mt-6'>Our <span>Purpose</span></h1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 md:mb-40 md:px-32 gap-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:mb-40 md:px-16 gap-8 w-full">
                 <div className="bg-yellow-400 p-6 md:p-8  rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl h-full">
                     <div className="mb-4">
                         <Image
