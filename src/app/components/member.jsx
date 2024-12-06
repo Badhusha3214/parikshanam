@@ -1,3 +1,4 @@
+// member
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -81,13 +82,13 @@ const IAMMemberPerks = () => {
     };
 
     return (
-        <main className="px-4 sm:px-6 md:px-10 lg:px-16 py-6 md:py-10 pb-12 md:pb-20">
-            <div className="bg-[#121212] text-white p-6 sm:p-10 lg:p-16">
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 md:mb-12">
-                    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-0">
+        <main className="px-4 sm:px-6 md:px-10 lg:px-10 py-6 md:py-10 pb-12 md:pb-20">
+            <div className="bg-[#121212] text-white p-10 my-10 sm:p-4 lg:p-10">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center  mb-8 md:mb-12">
+                    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 mt-20 sm:mb-0">
                         IAM Member <br className="hidden sm:block" /> Perks & Benefits
                     </h1>
-                    <span className="text-sm sm:text-lg">{perks.length} Total Benefits</span>
+                    <span className="text-sm sm:text-lg border-2 border-white rounded-xl px-4 py-2">{perks.length} Total Benefits</span>
                 </div>
 
                 <div className="relative overflow-hidden w-full">
@@ -151,7 +152,7 @@ const IAMMemberPerks = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="flex space-x-4 sm:space-x-8">
+                    <div className="flex space-x-4 mb-4 sm:mb-10 mt-4 sm:mt-0 sm:space-x-8">
                         <button
                             onClick={handlePrev}
                             className="bg-gray-700 border-4 border-white bg-opacity-0 p-3 sm:p-6 rounded-xl hover:bg-yellow-600 transition-colors"

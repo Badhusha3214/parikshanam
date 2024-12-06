@@ -5,6 +5,7 @@ import WhyIAM from './components/whyiam';
 import Navbar from './components/navbar';
 import IAMMemberPerks from './components/member';
 import { FooterSection } from './components/footer';
+import IamPeople from './components/iampeople';
 
 const IAMNextPage = () => {
   return (
@@ -116,7 +117,7 @@ const IAMNextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center p-4 md:p-8 mb-20 -mt-10 md:px-52">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center p-4 md:p-8 mb-20 -mt-10 md:px-[310px] ">
           <div className="w-full md:flex-1 md:mr-8 mb-8 md:mb-0">
             <div className="flex flex-col items-start bg-white overflow-hidden transform transition-all duration-300">
               <div className="w-full flex-1 p-6 md:p-8 border-l-4 border-yellow-400">
@@ -186,6 +187,186 @@ const IAMNextPage = () => {
 
 
         <IAMMemberPerks />
+
+
+        {/* Subscription Section */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">Subscribe to IAM</h2>
+            <p className="text-gray-700 text-xl max-w-2xl mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+            {/* Standard Plan */}
+            <div className="flex-1 bg-black text-white rounded-2xl p-10">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="p-2 bg-black border-2 border-yellow-400 rounded-lg">
+                  <img src="/i1.svg" alt="" className="w-10 h-10" />
+                </div>
+              </div>
+                <h3 className="font-bold my-2 text-3xl">Standard Plan</h3>
+              <p className="text-gray-400 mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div className="mb-6">
+                <span className="text-4xl font-bold">₹10,000</span>
+                <span className="text-gray-400">/ Per Year</span>
+              </div>
+              <button className="w-full bg-yellow-400 text-black font-bold py-3 rounded mb-8 hover:bg-yellow-500">
+                Get Started
+              </button>
+              <div className=' bg-gray-900 text-white rounded-lg -mx-8 -mb-8 p-4'>
+                <p className="font-bold mx-4 mb-4">Features:</p>
+                <ul className="space-y-2 mx-4">
+                  <li>Model Directory</li>
+                  <li>Preferred Partners</li>
+                  <li>Aspiring Talents</li>
+                  <li>Model Coordinators</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Lifetime Plan */}
+            <div className="flex-1 bg-gray-200 text-black rounded-2xl p-10">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="p-2 bg-gray border-2 border-yellow-400 rounded-lg">
+                  <img src="/i2.svg" alt="" className="w-10 h-10" />
+                </div>
+              </div>
+              <h3 className="font-bold my-2 text-3xl">Life Time Plan</h3>
+              <p className="text-gray-700 mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div className="mb-6">
+                <span className="text-4xl font-bold">₹25,000</span>
+              </div>
+              <button className="w-full bg-yellow-400 text-black font-bold py-3 rounded mb-8 hover:bg-yellow-500">
+                Get Started
+              </button>
+              <div className='bg-gray-100 text-black rounded-lg -mx-8 -mb-8 p-4'>
+                <p className="font-bold mx-4 mb-4">Features:</p>
+                <ul className="space-y-2 mx-4">
+                  <li>Model Directory</li>
+                  <li>Preferred Partners</li>
+                  <li>Aspiring Talents</li>
+                  <li>Model Coordinators</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <IamPeople />
+
+        {/* Contact Section */}
+        <div className="mx-4 md:mx-20 px-2 md:px-4 py-20 md:py-40 flex flex-col md:flex-row gap-10 md:gap-20">
+          {/* Left Section - Black Box */}
+          <div className="w-full md:w-1/2 bg-black text-white rounded-2xl p-6 md:p-16 min-h-[500px] md:min-h-[600px]">
+            <h2 className="text-4xl md:text-7xl font-bold mb-4 md:mb-8">Say Hi to IAM</h2>
+            <p className="mb-8 md:mb-12 text-base md:text-xl leading-relaxed max-w-3xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            
+            <div className="space-y-4 md:space-y-6 text-sm md:text-base">
+              <div className="flex items-center gap-3">
+                <img src="/Frame (4).svg" alt="Location" className="w-6 h-6" />
+                <p>On Stage, Near Mc Donalds, Palarivattom, 
+                   Chakkaraparambu, Ernakulam, Kerala 683032, India</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <img src="/Frame (5).svg" alt="Phone" className="w-6 h-6" />
+                <p>+91 484 4148269</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <img src="/Frame (6).svg" alt="Email" className="w-6 h-6" />
+                <a href="mailto:indianadfilmmakers@gmail.com" className="underline">
+                  indianadfilmmakers@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-6 md:mt-8 flex items-center justify-left">
+              <img 
+                src="/Avatar group.svg" 
+                alt="Expert Professionals"
+                className="w-32 md:w-auto md:pr-10"
+              />
+              <p className="ml-2 md:ml-4 text-sm md:text-base">More than 1000+ Expert Professionals</p>
+            </div>
+          </div>
+
+          {/* Right Section - Contact Form */}
+          <div className="w-full md:w-1/2">
+            <form className="space-y-4">
+              <div>
+                <label className="block text-xl md:text-2xl font-medium mb-2">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  placeholder="Enter your email"
+                  className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                  required
+                />
+              </div>
+
+              <div className="">
+                <div>
+                  <label className="block text-xl md:text-2xl font-medium mb-2">
+                    First name <span className="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    placeholder="Enter your first name"
+                    className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-xl md:text-2xl mt-2 font-medium mb-2">
+                    Last name <span className="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    placeholder="Enter your last name"
+                    className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xl md:text-2xl font-medium mb-2">
+                  Phone number <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  placeholder="Enter your phone number"
+                  className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-xl md:text-2xl font-medium mb-2">Message</label>
+                <textarea 
+                  placeholder="Enter your message"
+                  className="w-full p-2 md:p-3 border rounded-lg h-24 md:h-32 text-sm md:text-base"
+                />
+              </div>
+
+              <button 
+                type="submit"
+                className="w-full md:w-auto bg-yellow-400 text-black font-bold px-6 md:px-8 py-2 md:py-3 rounded-lg hover:bg-yellow-500 text-sm md:text-base"
+              >
+                Submit →
+              </button>
+            </form>
+          </div>
+        </div>
 
         <FooterSection />
       </div>
