@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Menu, ChevronDown } from 'lucide-react';
-
+    
 export default function Navbar() {
     const [modelsOpen, setModelsOpen] = useState(false);
     const [moreOpen, setMoreOpen] = useState(false);
@@ -158,7 +158,7 @@ export default function Navbar() {
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
                                 <Image
-                                    src="logo.svg"
+                                    src="/logo.svg"
                                     alt="Logo"
                                     width={120}
                                     height={40}
