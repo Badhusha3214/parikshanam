@@ -57,8 +57,8 @@ const BlogArticle = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-8">
                     <div>
-                        <span className="text-sm text-gray-800 border border-black p-2 rounded-lg font-medium">Insights</span>
-                        <h2 className="text-3xl font-bold mt-2">Latest Articles</h2>
+                        <span className="text-sm text-black bg-yellow-100 p-1 rounded-lg font-medium">blog</span>
+                        <h2 className="text-4xl font-bold mt-2">Latest Articles</h2>
                         <p className="text-gray-600 mt-2">
                             Donec ac odio tempor orci dapibus ultrices. Ut lectus arcu bibendum at varius
                             vel pharetra vel. Enim sed faucibus turpis in eu mi bibendum.
@@ -88,18 +88,18 @@ const BlogArticle = () => {
                         {articles.map((article, index) => (
                             <SwiperSlide key={index}>
                                 <div className="bg-white rounded-lg overflow-hidden">
-                                    <div className="relative h-48">
+                                    <div className="relative h-80 w-full">
                                         <Image
                                             src={article.image}
                                             alt={article.title}
                                             fill
-                                            className="object-cover rounded-lg"
+                                            className="object-cover rounded-xl"
                                         />
                                     </div>
-                                    <div className="p-6">
-                                        <span className="text-sm text-gray-600">{article.category}</span>
-                                        <h3 className="text-xl font-bold mt-2">{article.title}</h3>
-                                        <p className="text-gray-600 mt-2">{article.description}</p>
+                                    <div className="py-6">
+                                        <span className="text-lg text-gray-600">{article.category}</span>
+                                        <h3 className="text-3xl font-bold mt-2">{article.title}</h3>
+                                        <p className="text-gray-600 text-lg mt-2">{article.description}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -108,12 +108,12 @@ const BlogArticle = () => {
 
                     <div className="flex justify-end mt-8 space-x-4">
                         <button
-                            className="swiper-button-prev-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-400 transition-colors"
+                            className="swiper-button-prev-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-200 transition-colors"
                         >
                             <ChevronLeft className="text-gray-800 w-4 h-4 md:w-6 md:h-6" />
                         </button>
                         <button
-                            className="swiper-button-next-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-400 transition-colors"
+                            className="swiper-button-next-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-200 transition-colors"
                         >
                             <ChevronRight className="text-gray-800 w-4 h-4 md:w-6 md:h-6" />
                         </button>
