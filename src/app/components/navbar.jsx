@@ -147,7 +147,7 @@ export default function Navbar() {
     );
 
     return (
-        <nav className="relative bg-black shadow-lg z-50">
+        <nav className="fixed top-0 left-0 right-0 bg-black shadow-lg z-50">
             {/* Responsive Navigation Container */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-0">
                 <div className="flex items-center justify-between h-16">
@@ -251,12 +251,26 @@ export default function Navbar() {
                                 Research
                             </NavLink>
                             <NavLink 
+                                href="/gallery" 
+                                className="block px-4 py-2 text-white hover:bg-gray-800 hover:text-yellow-400"
+                                closeMenu={false}
+                            >
+                                Gallery
+                            </NavLink>
+                            <NavLink 
+                                href="/blog" 
+                                className="block px-4 py-2 text-white hover:bg-gray-800 hover:text-yellow-400"
+                                closeMenu={false}
+                            >
+                                blog
+                            </NavLink>
+                            {/* <NavLink 
                                 href="/careers" 
                                 className="block px-4 py-2 text-white hover:bg-gray-800 hover:text-yellow-400"
                                 closeMenu={false}
                             >
                                 Careers
-                            </NavLink>
+                            </NavLink> */}
                             <NavLink 
                                 href="/contact" 
                                 className="block px-4 py-2 text-white hover:bg-gray-800 hover:text-yellow-400"
@@ -274,7 +288,7 @@ export default function Navbar() {
                             transition={{ type: "spring", stiffness: 300 }}
                         >
                             <Link
-                                href="/signin"
+                                href="/signup"
                                 className="text-yellow-400 font-lg text-lg transition-all hover:text-yellow-300"
                             >
                                 Sign In
@@ -285,7 +299,7 @@ export default function Navbar() {
                             transition={{ type: "spring", stiffness: 300 }}
                         >
                             <Link
-                                href="/join"
+                                href="/login"
                                 className="bg-yellow-400 text-black font-lg text-lg px-6 py-2 rounded-md 
                                 transition-all hover:bg-yellow-500 hover:shadow-lg"
                             >

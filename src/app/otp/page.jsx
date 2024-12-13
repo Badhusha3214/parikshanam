@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Navbar from '../components/navbar'
 
 export default function VerifyPage() {
+    const router = useRouter()
     const [otp, setOtp] = useState(['', '', '', '', ''])
 
     const handleChange = (index, value) => {
@@ -18,6 +20,18 @@ export default function VerifyPage() {
                 nextInput?.focus()
             }
         }
+    }
+
+    const handleNext = () => {
+        // Here you might want to add OTP validation logic
+        // For now, we'll just navigate if all OTP fields are filled
+        if (otp.every(digit => digit.trim() !== '')) {
+            router.push('/password')
+        }
+    }
+
+    const handleBack = () => {
+        router.back()
     }
 
     return (
@@ -58,10 +72,16 @@ export default function VerifyPage() {
                         </p>
 
                         <div className="flex gap-4">
-                            <button className="flex-1 bg-gray-100 text-black font-semibold p-3 rounded-lg hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
+                            <button 
+                                onClick={handleBack}
+                                className="flex-1 bg-gray-100 text-black font-semibold p-3 rounded-lg hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                            >
                                 Back
                             </button>
-                            <button className="flex-1 bg-yellow-400 text-black font-semibold p-3 rounded-lg hover:bg-yellow-500 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2">
+                            <button 
+                                onClick={handleNext}
+                                className="flex-1 bg-yellow-400 text-black font-semibold p-3 rounded-lg hover:bg-yellow-500 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
+                            >
                                 Next
                             </button>
                         </div>
@@ -71,4 +91,3 @@ export default function VerifyPage() {
         </>
     )
 }
-

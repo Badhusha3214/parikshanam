@@ -56,8 +56,8 @@ export default function SignupPage() {
         if (validateForm()) {
             // Handle form submission
             console.log(formData)
-            // Navigate to the next page (OTP verification)
-            router.push('/verify')
+            // Navigate to the OTP page
+            router.push('/otp')
         }
     }
 
@@ -158,4 +158,3 @@ export default function SignupPage() {
         </>
     )
 }
-

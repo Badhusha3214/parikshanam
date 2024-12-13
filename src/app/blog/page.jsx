@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/navbar';
+import Link from 'next/link';
 
 // Mock blog post data
 const blogPosts = [
     {
-        category: 'Filmmaking',
+        category: 'Film making',
         title: 'AI in Ad & Film making',
         description: 'Revolutionizing Creativity Discover how artificial intelligence is reshaping ad film production in unprecedented ways.',
         date: 'Jun 25, 2025',
@@ -104,7 +105,7 @@ export default function BlogPage() {
     const [searchQuery, setSearchQuery] = useState('');
 
     // Categories for filtering
-    const categories = ['All Category', 'Filmmaking', 'IAM News', 'Sports', 'Initiatives'];
+    const categories = ['All Category', 'Film making', 'IAM News', 'Sports', 'Initiatives'];
 
     // Filtering and pagination logic
     const filteredPosts = blogPosts.filter(post =>
@@ -139,10 +140,9 @@ export default function BlogPage() {
     return (
         <main className="min-h-screen bg-white text-black">
             <Navbar />
-            <div className=" mx-auto px-72 py-8">
+            <div className=" mx-auto px-72 py-8 mt-10">
                 
                 {/* Header Section */}
-
                 <div className="mb-12">
                     <span className="text-sm text-gray-500">Blog Post</span>
                     <h1 className="text-4xl font-bold mt-2 mb-4">Blog Insights & Industry News</h1>
@@ -152,7 +152,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* Featured Post */}
-                <div className="relative mb-12 group cursor-pointer">
+                <Link href="/blog/post" className="block relative mb-12 group cursor-pointer">
                     <div className="relative h-[800px] w-full overflow-hidden rounded-xl">
                         <Image
                             src="/bg-blog.svg"
@@ -175,11 +175,11 @@ export default function BlogPage() {
                                     </span>
                                     <span className="text-sm text-gray-400">Jun 25, 2025</span>
                                 </div>
-                                <span className="px-3 py-1 rounded-full bg-white/10 text-sm">Filmmaking</span>
+                                <span className="px-3 py-1 rounded-full bg-white/10 text-sm">Film making</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Link>
 
                 {/* Category and Search Filters */}
                 <div className="flex items-center justify-between  mb-12">

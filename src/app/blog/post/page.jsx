@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Navbar from '@/app/components/navbar'
-import { FooterSection } from '@/app/components/footer'
+import Navbar from '../../components/navbar'
+import { FooterSection } from '../../components/footer'
 import BlogArticle from '../../components/blogarticle';
 
 
@@ -14,7 +14,7 @@ export default function BlogPost() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="mx-auto px-4 py-12 sm:py-20">
+      <main className="mx-auto px-4 py-12 sm:py-20 mt-8">
         {/* Article Header */}
         <div className="text-center mb-8">
           <p className="text-black mb-4">Published Jan 23, 2023</p>

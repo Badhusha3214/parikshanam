@@ -14,6 +14,15 @@ export default function CreatePasswordPage() {
     const handleSubmit = (e) => {
         e.preventDefault()
         // Handle form submission
+        if (formData.password !== formData.confirmPassword) {
+            alert('Passwords do not match')
+            return
+        }
+        if (!formData.agreeToTerms) {
+            alert('Please agree to the terms and conditions')
+            return
+        }
+        router.push('/')
         console.log(formData)
     }
 
