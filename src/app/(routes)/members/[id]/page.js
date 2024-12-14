@@ -1,16 +1,16 @@
 "use client"
 
-import ProfileCard from "@/app/components/members/member/member-profile";
-import { fetchMemberById } from "@/app/lib/members";
+import ProfileCard from "../../app/components/members/member/member-profile";
+import { fetchMemberById } from "../../app/lib/members";
 import { useParams } from "next/navigation";
 import Head from "next/head";
-import Summary from "@/app/components/members/member/summary";
-import { Awards } from "@/app/components/members/member/awards";
-import Languages from "@/app/components/languages";
-import ShowReel from "@/app/components/show-reel";
-import Links from "@/app/components/links";
-import { Works } from "@/app/components/members/member/works";
-import {Gallery}  from "@/app/components/members/member/gallary";
+import Summary from "../../app/components/members/member/summary";
+import { Awards } from "../../app/components/members/member/awards";
+import Languages from "../../app/components/languages";
+import ShowReel from "../../app/components/show-reel";
+import Links from "../../app/components/links";
+import { Works } from "../../app/components/members/member/works";
+import {Gallery}  from "../../app/components/members/member/gallary";
 
 
 
