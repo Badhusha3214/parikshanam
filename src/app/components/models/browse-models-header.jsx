@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Underline from "@/app/assets/icons/underline.svg";
+import { SearchBar } from "../search-name-location";
 
 const Browse_Header = ({ bg, heading }) => {
-  const words = heading.split(" ");
-  const lastWord = words.pop();
-  const remainingWords = words.join(" ");
+ 
 
   return (
-    <div className="relative h-80 lg:h-96 bg-black overflow-hidden">
+    <div>
+    <div className="relative h-80 lg:h-[500px] bg-black  ">
       <Image
         src={bg}
         alt="Profile banner"
@@ -15,17 +15,23 @@ const Browse_Header = ({ bg, heading }) => {
         fill
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/70" />
-      <div className="relative h-full flex items-center justify-center">
-        <h1 className="custom-h1 text-white">
-          {remainingWords} 
+      <div className=" absolute top-1/2 transform  -translate-y-1/2 space-y-10 left-0 right-0   ">
+        <h1 className="custom-h1 text-center text-white">
+          {"Find your"}
           <span className="relative">
-            {'  ' + lastWord}
+            {"  " + "Dream Model"}
             <Underline className="absolute left-2 w-full  text-brand h-3" />
           </span>
         </h1>
+        <div className="px-section">
+            <SearchBar/>
+        </div>
+      
+   
+       
       </div>
-
+       
+    </div>
     </div>
   );
 };

@@ -15,12 +15,7 @@ const ShowReel = ({ videoId, description }) => {
         <div className="flex w-full justify-center items-center">
           <iframe
             className="aspect-video mx-auto w-full"
-            src={`https://www.youtube.com/embed/${videoId}?
-            controls=1&
-            modestbranding=1&
-            showinfo=0&
-            rel=0&
-            iv_load_policy=3`}
+            src={`https://www.youtube.com/embed/${videoId}?controls=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3`}
             title="ShowReel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             referrerPolicy="strict-origin-when-cross-origin"

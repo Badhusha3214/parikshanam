@@ -1,13 +1,32 @@
+"use client"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { usePagination } from "../contexts/PaginationContext";
 import { LeftIcon, RightIcon } from "./ui/icons";
+import { useEffect, useState } from "react";
+import { isBrowser } from "../utils/isBrowser";
 
 const Pagination = () => {
   const { pagination, setPaginationDetails } = usePagination();
   const { page, pageCount } = pagination;
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobileView = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    if(isBrowser()){
+        checkMobileView()
+        window.addEventListener('resize', checkMobileView);
+        return () => window.removeEventListener('resize', checkMobileView);
+    }
+
+   
+  }, []);
+
   
-  if (pageCount === 1) return null;
+  if (pageCount <= 1) return null;
 
   const handlePageChange = (newPage) => {
     if (newPage >= 1 && newPage <= pageCount) {
@@ -17,24 +36,47 @@ const Pagination = () => {
 
   const getPageNumbers = () => {
     const pages = [];
-    if (pageCount <= 7) {
-      for (let i = 1; i <= pageCount; i++) {
-        pages.push(i);
-      }
-    } else {
-      if (page <= 3) {
-        pages.push(1, 2, 3, 4, 5, '...', pageCount);
-      } else if (page >= pageCount - 2) {
-        pages.push(1, '...', pageCount - 4, pageCount - 3, pageCount - 2, pageCount - 1, pageCount);
+
+    
+    if (isMobile) {
+      if (pageCount <= 3) {
+      
+        for (let i = 1; i <= pageCount; i++) {
+          pages.push(i);
+        }
       } else {
-        pages.push(1, '...', page - 1, page, page + 1, '...', pageCount);
+       
+        if (page <= 2) {
+          pages.push(1, 2, '...', pageCount);
+        } else if (page >= pageCount - 1) {
+          pages.push(1, '...', pageCount - 1, pageCount);
+        } else {
+          pages.push(1, '...', page, '...', pageCount);
+        }
+      }
+    } 
+   
+    else {
+      if (pageCount <= 7) {
+        for (let i = 1; i <= pageCount; i++) {
+          pages.push(i);
+        }
+      } else {
+        if (page <= 3) {
+          pages.push(1, 2, 3, 4, 5, '...', pageCount);
+        } else if (page >= pageCount - 2) {
+          pages.push(1, '...', pageCount - 4, pageCount - 3, pageCount - 2, pageCount - 1, pageCount);
+        } else {
+          pages.push(1, '...', page - 1, page, page + 1, '...', pageCount);
+        }
       }
     }
+
     return pages;
   };
 
   return (
-    <div className="flex justify-center items-center space-x-2 mt-8">
+    <div className="flex justify-center items-center space-x-2 my-10 md:my-20">
       <button
         disabled={page === 1}
         onClick={() => handlePageChange(page - 1)}

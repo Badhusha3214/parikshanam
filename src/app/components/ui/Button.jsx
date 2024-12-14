@@ -3,7 +3,7 @@ import React from "react";
 
 const variants = {
   primary: "bg-black text-white hover:opacity-90 ",
-  secondary: "text-black hover:opacity:90,",
+  secondary: "text-fontColor-subtle hover:opacity:90,",
 };
 
 const sizes = {
