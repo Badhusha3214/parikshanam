@@ -10,8 +10,16 @@ module.exports = {
       fontSize: {
         elarge: '74px',
         large: '64px',
-        mid: '48px', // New font size added
-        base: '18px',
+        mid: '48px',
+        cdh: '24px',
+        pch: '22px',
+        normal: '18px',
+        th: '48px',
+        tn: '17px',
+        tsh: '16px',
+        ph: '45px',
+        pn: '17px',
+        psh: '15px',
       },
       colors: {
         brand: {

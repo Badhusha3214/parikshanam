@@ -5,8 +5,8 @@ const SubscriptionSection = () => {
   return (
     <div className="container mx-auto px-4 py-20">
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-6xl font-bold mb-4">Subscribe to IAM</h2>
-        <p className="text-gray-700 text-xl max-w-2xl mx-auto">
+        <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4">Subscribe to IAM</h2>
+        <p className="text-gray-700 text-pn sm:text-tn md:text-normal max-w-2xl mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
@@ -19,18 +19,18 @@ const SubscriptionSection = () => {
               <img src="/i1.svg" alt="" className="w-10 h-10" />
             </div>
           </div>
-          <h3 className="font-bold my-2 text-3xl">Standard Plan</h3>
-          <p className="text-gray-400 mb-6">
+          <h3 className="font-bold my-2 text-cdh sm:text-pch md:text-cdh">Standard Plan</h3>
+          <p className="text-gray-400 text-pn sm:text-tn md:text-normal mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className="mb-6">
-            <span className="text-4xl font-bold">₹10,000</span>
-            <span className="text-gray-400">/ Per Year</span>
+            <span className="text-ph sm:text-th md:text-mid font-bold">₹10,000</span>
+            <span className="text-gray-400 text-pn sm:text-tn md:text-normal">/ Per Year</span>
           </div>
-          <button className="w-full bg-yellow-400 text-black font-bold py-3 rounded mb-8 hover:bg-yellow-500">
+          <button className="w-full bg-yellow-400 text-black font-bold py-3 text-pn sm:text-tn md:text-normal rounded mb-8 hover:bg-yellow-500">
             Get Started
           </button>
-          <div className='bg-gray-900 text-white rounded-lg -mx-8 -mb-8 p-4'>
+          <div className='text-pn sm:text-tn md:text-normal bg-gray-900 text-white rounded-lg -mx-8 -mb-8 p-4'>
             <p className="font-bold mx-4 mb-4">Features:</p>
             <ul className="space-y-2 mx-4">
               <li>Model Directory</li>
@@ -49,16 +49,16 @@ const SubscriptionSection = () => {
             </div>
           </div>
           <h3 className="font-bold my-2 text-3xl">Life Time Plan</h3>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-6 text-pn sm:text-tn md:text-normal ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className="mb-6">
-            <span className="text-4xl font-bold">₹25,000</span>
+            <span className="text-ph sm:text-th md:text-mid font-bold">₹25,000</span>
           </div>
-          <button className="w-full bg-yellow-400 text-black font-bold py-3 rounded mb-8 hover:bg-yellow-500">
+          <button className="w-full bg-yellow-400 text-pn sm:text-tn md:text-normal text-black font-bold py-3 rounded mb-8 hover:bg-yellow-500">
             Get Started
           </button>
-          <div className='bg-gray-100 text-black rounded-lg -mx-8 -mb-8 p-4'>
+          <div className='text-pn sm:text-tn md:text-normal bg-gray-100 text-black rounded-lg -mx-8 -mb-8 p-4'>
             <p className="font-bold mx-4 mb-4">Features:</p>
             <ul className="space-y-2 mx-4">
               <li>Model Directory</li>

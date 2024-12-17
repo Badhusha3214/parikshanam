@@ -58,7 +58,7 @@ const perks = [
     },
     {
         id: 8,
-        image: '/exclusive.jpg',
+        image: '/',
         logo: '/wifi.svg',
         title: 'Exclusive Perks',
         description: 'Special benefits for members'
@@ -85,10 +85,10 @@ const IAMMemberPerks = () => {
         <main className="w-full px-2 sm:px-4 md:px-6 lg:px-10 py-4 md:py-8">
             <div className="bg-[#121212] text-white p-4 sm:p-6 md:p-10 lg:py-20 lg:pl-20">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 md:mb-10">
-                    <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 sm:mb-0 leading-tight">
+                    <h1 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4 sm:mb-0 leading-tight">
                         IAM Member <br className="hidden sm:block" /> Perks & Benefits
                     </h1>
-                    <span className="text-xs sm:text-sm border-2 border-white rounded-xl px-3 py-1 sm:px-4 sm:py-2">
+                    <span className="text-pn sm:text-tn md:text-normal border-2 border-white rounded-xl px-3 py-1 sm:px-4 sm:py-2">
                         {perks.length} Total Benefits
                     </span>
                 </div>
@@ -141,7 +141,7 @@ const IAMMemberPerks = () => {
                                     </div>
 
                                     <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-5">
-                                        <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">{perk.title}</h2>
+                                        <h2 className="text-cdh sm:text-pch md:text-cdh font-bold text-white">{perk.title}</h2>
                                     </div>
                                 </div>
                             </SwiperSlide>

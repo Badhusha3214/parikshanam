@@ -76,9 +76,11 @@ export default function IamPeople() {
     return (
         <section className="py-12 md:py-20 bg-white text-black">
             <div className="text-center mb-12 px-4">
-                <h2 className='text-2xl sm:text-4xl lg:text-6xl font-bold mt-6'>What People Say <span>About IAM</span></h2>
+                <h2 className='text-ph sm:text-th lg:text-th xl:text-large font-bold mt-6'>What People Say <span>About IAM</span></h2>
+            <p className="text-gray-700 text-pn mt-2 sm:text-tn md:text-normal text-center max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
             </div>
-
             <div className="relative overflow-visible w-full">
                 <Swiper
                     ref={swiperRef}
@@ -115,7 +117,7 @@ export default function IamPeople() {
                                     alt={testimonial.name}
                                     className="w-16 h-16 md:w-24 md:h-24 rounded-lg mb-6 md:mb-8"
                                 />
-                                <p className="text-base md:text-xl mb-6 md:mb-8">{testimonial.quote}</p>
+                                <p className="text-pn  sm:text-tn md:text-normal mb-6 md:mb-8">{testimonial.quote}</p>
                                 <div className="flex mb-4 md:mb-6">
                                     {[...Array(5)].map((_, i) => (
                                         <span key={i} className="text-yellow-400 text-xl md:text-3xl">
@@ -123,8 +125,8 @@ export default function IamPeople() {
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="font-bold text-xl md:text-3xl">{testimonial.name}</h3>
-                                <p className="text-gray-400 text-sm md:text-base">{testimonial.role}</p>
+                                <h3 className="font-bold text-cdh sm:text-pch md:text-cdh">{testimonial.name}</h3>
+                                <p className="text-gray-400 text-pn  sm:text-tn md:text-normal">{testimonial.role}</p>
                             </div>
                         </SwiperSlide>
                     ))}

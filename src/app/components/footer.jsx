@@ -11,7 +11,7 @@ const FooterSection = () => {
                     {/* Logo and Description Column */}
                     <div className="w-full lg:w-1/3">
                         <Image src="/logo.svg" alt="Logo" width={144} height={36} className="mb-6 sm:mb-8 w-36" />
-                        <p className="text-gray-400 text-sm sm:text-base pr-0 lg:pr-8">
+                        <p className="text-gray-400 text-pn sm:text-tn lg:text-tn xl:text-normal pr-0 lg:pr-8">
                             Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.
                         </p>
                     </div>
@@ -25,8 +25,8 @@ const FooterSection = () => {
                             { title: "Resources", links: ["Terms & Conditions", "Refund Policy", "Privacy Policy", "Blogs"] }
                         ].map((section, index) => (
                             <div key={index}>
-                                <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">{section.title}</h4>
-                                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base">
+                                <h4 className="text-pdh sm:text-cdh  lg:text-cdh xl:text-cdh font-bold mb-4 sm:mb-6">{section.title}</h4>
+                                <ul className="space-y-2 sm:space-y-3 text-pn sm:text-tn lg:text-tn xl:text-normal">
                                     {section.links.map((link, linkIndex) => (
                                         <li key={linkIndex}>
                                             <Link href="#" className="text-gray-300 hover:underline hover:text-white transition-colors duration-200">
@@ -43,7 +43,7 @@ const FooterSection = () => {
                 {/* Copyright and Social Icons */}
                 <hr className="my-6 sm:my-8 border-gray-700" />
                 <div className="flex flex-col sm:flex-row items-center justify-between text-center sm:text-left">
-                    <p className="text-gray-400 text-sm sm:text-base mb-4 sm:mb-0">&copy; 2025 Indian Ad Film Makers. All rights reserved.</p>
+                    <p className="text-gray-400 text-pn sm:text-tn lg:text-tn xl:text-normal mb-4 sm:mb-0">&copy; 2025 Indian Ad Film Makers. All rights reserved.</p>
                     <div className="flex justify-center sm:justify-start space-x-4 sm:space-x-6">
                         {[
                             { name: "LinkedIn", src: "/footer/Linkedin.png" },
