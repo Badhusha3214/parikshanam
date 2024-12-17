@@ -26,7 +26,7 @@ const IAMNextPage = () => {
         />
         <div className="relative z-10 container mx-auto px-4 text-white">
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-ph sm:text-ph md:text-th lg:text-elarge font-bold leading-tight">
+            <h1 className="text-[50px] sm:text-[55px] md:text-large lg:text-elarge font-bold leading-tight">
               IAM: Empowering Indian Ad Film Makers
             </h1>
             <p className="text-sm xs:text-pn sm:text-tn md:text-normal opacity-90 max-w-lg">

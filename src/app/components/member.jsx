@@ -165,13 +165,13 @@ const IAMMemberPerks = () => {
                     <div className="flex space-x-2 sm:space-x-4 lg:mr-20">
                         <button
                             onClick={handlePrev}
-                            className="bg-gray-700 border-2 sm:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                            className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
                         >
                             <ChevronLeft className="text-white w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
                         </button>
                         <button
                             onClick={handleNext}
-                            className="bg-gray-700 border-2 sm:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                            className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
                         >
                             <ChevronRight className="text-white w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
                         </button>
