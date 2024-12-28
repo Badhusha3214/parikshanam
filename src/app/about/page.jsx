@@ -12,7 +12,7 @@ export default function About() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="min-h-screen flex flex-col lg:flex-row relative px-4 sm:px-6 lg:px-0 pt-4 sm:pt-4 lg:px-0 mb-[40px] sm:mb-[50px] lg:mb-[100px]">
+            <section className="min-h-screen mt-16 flex flex-col lg:flex-row relative px-4 sm:px-6 lg:px-0 pt-4 sm:pt-4 lg:px-0 mb-[40px] sm:mb-[50px] lg:mb-[100px]">
                 {/* Left Column */}
                 <div className="flex flex-col justify-center w-full lg:w-1/2 max-w-7xl mx-auto  lg:pl-8 xl:pl-20 py-0 lg:py-0">
 
@@ -34,7 +34,7 @@ export default function About() {
                 </div>
                 <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto relative mt-8 lg:mt-0">
                     <Image
-                        src="/replace.svg"
+                        src="/replace.png"
                         alt="About Hero"
                         fill
                         className="object-cover"
@@ -123,9 +123,7 @@ export default function About() {
                         <StatBlock number="20%" title="Increased Recognitions" />
                         <StatBlock number="15%" title="More Networking" />
                         <StatBlock number="89%" title="Average ROI Return" />
-                    </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                         <StatBlock number="250+" title="Satisfied Members" />
                         <StatBlock number="15+" title="Workshops Organised" />
                         <StatBlock number="30%" title="Increased Client Acquisition" />
