@@ -18,7 +18,7 @@ export default function BlogPost() {
         {/* Article Header */}
         <div className="text-center mb-8">
           <p className="text-black mb-4">Published Jan 23, 2023</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-mobile-large sm:text-large md:text-elarge font-bold mb-6">
             Ai in Advertisement and Film Making
           </h1>
           <p className="mb-6 w-full sm:w-5/6 text-base sm:text-lg mx-auto text-black">
@@ -48,7 +48,7 @@ export default function BlogPost() {
         {/* Article Content */}
         <article className="prose max-w-none">
           <div className="max-w-[900px] mx-auto px-2 sm:px-4">
-            <h2 className="text-2xl font-bold mb-4">Introduction</h2>
+            <h2 className="text-mid font-bold mb-4">Introduction</h2>
             <p className="mb-6 text-gray-700">
               Tellus rutrum tellus pellentesque eu. Purus viverra accumsan in nisl. Posuere sollicitudin aliquam ultrices sagittis orci a. Aliquam faucibus purus in massa tempor nec feugiat. Arcu ac tortor dignissim convallis aenean et. Amet mauris commodo quis imperdiet. Duis ut diam quam nulla porttitor massa id. Adipiscing elit pellentesque habitant morbi. Quam vulputate dignissim suspendisse in est ante. Iaculis urna id volutpat lacus laoreet. Pharetra vel turpis nunc eget. Augue mauris augue neque gravida in fermentum et sollicitudin.          </p>
             <br></br>
@@ -70,7 +70,7 @@ export default function BlogPost() {
               <br></br><br></br>
               Tellus rutrum tellus pellentesque eu. Purus viverra accumsan in nisl. Posuere sollicitudin aliquam ultrices sagittis orci a. Aliquam faucibus purus in massa tempor nec feugiat. Arcu ac tortor dignissim convallis aenean et. Amet mauris commodo quis imperdiet. Duis ut diam quam nulla porttitor massa id. Adipiscing elit pellentesque habitant morbi. Quam vulputate dignissim suspendisse in est ante. Iaculis urna id volutpat lacus laoreet. Pharetra vel turpis nunc eget. Augue mauris augue neque gravida in fermentum et sollicitudin.          </p>
 
-            <h2 className="text-2xl font-bold mb-4">Why AI Is Important</h2>
+            <h2 className="text-mid font-bold mb-4">Why AI Is Important</h2>
             <p className="mb-6 text-gray-700">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
             </p>
@@ -82,7 +82,7 @@ export default function BlogPost() {
             </ol>
 
             <div className="bg-gray-50 p-6 rounded-lg mb-8">
-              <h3 className="text-xl font-bold mb-4 flex items-center">
+              <h3 className="text-cdh font-bold mb-4 flex items-center">
                 <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>

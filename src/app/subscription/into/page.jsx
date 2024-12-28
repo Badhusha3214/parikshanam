@@ -3,57 +3,42 @@ import Image from "next/image"
 import { ChevronLeft } from 'lucide-react'
 import Navbar from "../../components/navbar"
 
-
 export default function Page() {
   return (
-    <div className="min-h-screen  text-white">
+    <div className="min-h-screen text-white">
       {/* Navigation */}
       <Navbar />
 
       {/* Main Content */}
-      <main className=" ">
-        <div className="px-4 bg-[#111111] mx-auto   md:px-72 py-8">
+      <main>
+        <div className="px-4 bg-[#111111] mx-auto md:px-8 lg:px-72 py-8">
+          <Link href="/subscription" className="inline-flex items-center text-tn text-gray-400 hover:text-white mb-8">
+            <ChevronLeft className="h-4 w-4 mr-1" />
+            Back to Subscriptions
+          </Link>
 
-          <Link
-            href="/subscription"
-          className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8"
-        >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Back to Subscriptions
-        </Link>
-
-        {/* Member Header */}
-        <div className="flex items-center space-x-4 mb-12">
-          <div className="bg-yellow-400 p-4 rounded-lg">
-            <svg
-              className="h-6 w-6 text-black"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
+          {/* Member Header */}
+          <div className="flex items-center space-x-4 mb-12">
+            <div className="bg-yellow-400 p-4 rounded-lg">
+              <svg className="h-6 w-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-large font-bold">IAM Member</h1>
+              <p className="text-gray-400">
+                Notion is the all-in-one workspace for notes, project management, documents, and collaboration
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold">IAM Member</h1>
-            <p className="text-gray-400">
-              Notion is the all-in-one workspace for notes, project management, documents, and collaboration
-            </p>
-          </div>
-        </div>
         </div>
 
         {/* Content Grid */}
-        <div className="grid mx-auto   md:px-72 py-8 md:grid-cols-[250px,1fr] gap-12 bg-white text-black rounded-lg p-8">
+        <div className="grid mx-auto px-4 md:px-8 lg:px-72 py-8 md:grid-cols-[250px,1fr] gap-6 lg:gap-12 bg-white text-black rounded-lg p-4 sm:p-8">
           {/* Table of Contents */}
           <aside className="space-y-4">
             <h2 className="font-medium mb-4">Table Of Contents</h2>
-            <ol className="space-y-3 text-sm">
+            <ol className="space-y-3 text-tn">
               <li>
                 <Link href="#introduction" className="text-gray-600 hover:text-black">
                   Introduction
@@ -75,7 +60,7 @@ export default function Page() {
           {/* Main Content */}
           <div className="space-y-12">
             <section id="introduction">
-              <h2 className="text-2xl font-bold mb-6">Introduction</h2>
+              <h2 className="text-large font-bold mb-6">Introduction</h2>
               <p className="text-gray-700 leading-relaxed">
                 Notion is an all-in-one workspace designed to enhance productivity and organization across teams and
                 individuals. By combining elements of note-taking, task management, databases, and collaborative tools into
@@ -100,7 +85,7 @@ export default function Page() {
             </section>
 
             <section id="for-whom">
-              <h2 className="text-2xl font-bold mb-6">For Whom?</h2>
+              <h2 className="text-large font-bold mb-6">For Whom?</h2>
               <div className="space-y-6">
                 <p className="text-gray-700 leading-relaxed">
                   To effectively use Notion, you'll need a stable internet connection to ensure seamless access and real-time
@@ -125,7 +110,7 @@ export default function Page() {
             </section>
 
             <section id="getting-started">
-              <h2 className="text-2xl font-bold mb-6">Getting Started</h2>
+              <h2 className="text-large font-bold mb-6">Getting Started</h2>
               <div className="space-y-6">
                 <p className="text-gray-700 leading-relaxed">
                   Getting started with Notion is straightforward and can be accomplished in just a few steps. Begin by signing
@@ -151,23 +136,22 @@ export default function Page() {
         </div>
 
         {/* CTA Section */}
-        <div className="pmx-auto   md:px-72 py-8"> 
-
-          <section className="bg-black  mt-20 p-12 rounded-lg text-center">
-            <h2 className="text-3xl font-bold  mb-4">Join the Talented group of Impact Individuals</h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            IAM enables you to achieve clarity and significant results on a large scale by networking and workflows to the
-            overarching objectives of the adfirms.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-yellow-400 text-black hover:bg-yellow-300 px-6 py-3 rounded-md text-sm font-medium">
-              Sign Up
-            </button>
-            <button className="border border-gray-600 text-white hover:bg-gray-800 px-6 py-3 rounded-md text-sm font-medium">
-              Contact Us
-            </button>
-          </div>
-        </section>
+        <div className="mx-auto md:px-72 py-8">
+          <section className="bg-black mt-20 p-12 rounded-lg text-center">
+            <h2 className="text-large font-bold mb-4">Join the Talented group of Impact Individuals</h2>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+              IAM enables you to achieve clarity and significant results on a large scale by networking and workflows to the
+              overarching objectives of the adfirms.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-yellow-400 text-black hover:bg-yellow-300 px-6 py-3 rounded-md text-tn font-medium">
+                Sign Up
+              </button>
+              <button className="border border-gray-600 text-white hover:bg-gray-800 px-6 py-3 rounded-md text-tn font-medium">
+                Contact Us
+              </button>
+            </div>
+          </section>
         </div>
       </main>
     </div>

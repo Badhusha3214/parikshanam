@@ -97,63 +97,56 @@ const blogPosts = [
         readTime: 10 + index
     }))
 ];
-
 export default function BlogPage() {
-    // State for current page and category filter
     const [currentPage, setCurrentPage] = useState(2);
     const [selectedCategory, setSelectedCategory] = useState('All Category');
     const [searchQuery, setSearchQuery] = useState('');
+    const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
-    // Categories for filtering
     const categories = ['All Category', 'Film making', 'IAM News', 'Sports', 'Initiatives'];
 
-    // Filtering and pagination logic
     const filteredPosts = blogPosts.filter(post =>
         (selectedCategory === 'All Category' || post.category === selectedCategory) &&
         (post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.description.toLowerCase().includes(searchQuery.toLowerCase()))
     );
 
-    // Pagination
     const postsPerPage = 9;
     const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
     const startIndex = (currentPage - 1) * postsPerPage;
     const displayedPosts = filteredPosts.slice(startIndex, startIndex + postsPerPage);
 
-    // Handlers
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
         setCurrentPage(1);
+        setIsMobileFiltersOpen(false);
     };
 
     const handlePageChange = (page) => {
         if (page > 0 && page <= totalPages) {
             setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
-        setCurrentPage(1);
-    };
-
     return (
-        <main className="min-h-screen bg-white text-black">
+        <main className="min-h-screen mt-14 bg-white text-black">
             <Navbar />
-            <div className=" mx-auto px-72 py-8 mt-10">
-                
+            
+            {/* Main Content Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
                 {/* Header Section */}
-                <div className="mb-12">
-                    <span className="text-sm text-gray-500">Blog Post</span>
-                    <h1 className="text-4xl font-bold mt-2 mb-4">Blog Insights & Industry News</h1>
-                    <p className="text-gray-600">
+                <div className="space-y-2 mb-6 sm:mb-8 lg:mb-12">
+                    <span className="text-xs sm:text-sm text-gray-500">Blog Post</span>
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Blog Insights & Industry News</h1>
+                    <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
                         Explore curated articles, tips, and resources shared by industry leaders and experts.
                     </p>
                 </div>
 
                 {/* Featured Post */}
-                <Link href="/blog/post" className="block relative mb-12 group cursor-pointer">
-                    <div className="relative h-[800px] w-full overflow-hidden rounded-xl">
+                <Link href="/blog/post" className="block group mb-8 sm:mb-12">
+                    <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden rounded-lg">
                         <Image
                             src="/bg-blog.svg"
                             alt="AI in Filmmaking"
@@ -162,127 +155,135 @@ export default function BlogPage() {
                             className="transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                        <div className="absolute bottom-0 p-8 text-white w-full bg-opacity-50 backdrop-blur-sm">
-                            <h2 className="text-3xl font-bold mb-2">AI in Ad & Film making</h2>
-                            <p className="text-gray-200 mb-4">
-                                Revolutionizing Creativity Discover how artificial intelligence is reshaping ad film production in
-                                unprecedented ways.
-                            </p>
-                            <div className="flex items-center gap-4">
-                                <div className="flex items-center gap-2">
-                                    <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                                        <span className="text-xs">25</span>
-                                    </span>
-                                    <span className="text-sm text-gray-400">Jun 25, 2025</span>
+                        <div className="absolute bottom-0 p-4 sm:p-6 lg:p-8 w-full">
+                            <div className="max-w-3xl space-y-2">
+                                <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white">AI in Ad & Film making</h2>
+                                <p className="text-sm sm:text-base text-gray-200 line-clamp-2 sm:line-clamp-none">
+                                    Revolutionizing Creativity Discover how artificial intelligence is reshaping ad film production in unprecedented ways.
+                                </p>
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white">
+                                            <span className="text-xs">25</span>
+                                        </span>
+                                        <span className="text-sm text-gray-300">Jun 25, 2025</span>
+                                    </div>
+                                    <span className="px-3 py-1 rounded-full bg-white/10 text-sm text-white">Film making</span>
                                 </div>
-                                <span className="px-3 py-1 rounded-full bg-white/10 text-sm">Film making</span>
                             </div>
                         </div>
                     </div>
                 </Link>
 
-                {/* Category and Search Filters */}
-                <div className="flex items-center justify-between  mb-12">
-                    <div className="flex gap-4 bg-yellow-100">
-                        {categories.map((category) => (
-                            <button
-                                key={category}
-                                onClick={() => handleCategoryChange(category)}
-                                className={`px-4 py-2 rounded-xl text-md transition-colors ${selectedCategory === category
-                                        ? 'bg-black text-white'
-                                        : ' hover:bg-gray-200'
-                                    }`}
-                            >
-                                {category}
-                            </button>
-                        ))}
-                    </div>
-                    <div className="relative ">
-                        <input
-                            type="search"
-                            placeholder="Search article..."
-                            value={searchQuery}
-                            onChange={handleSearchChange}
-                            className="px-4 py-2 bg-yellow-100 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-100 border-0 w-96 placeholder:text-black"
-                        />
-                        <svg className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-black  " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                {/* Filters Section */}
+                <div className="sticky top-0 z-10 bg-white py-4 mb-6">
+                    <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
+                        {/* Categories */}
+                        <div className="overflow-x-auto scrollbar-hide">
+                            <div className="flex gap-2 bg-yellow-100 p-2 rounded-xl min-w-max">
+                                {categories.map((category) => (
+                                    <button
+                                        key={category}
+                                        onClick={() => handleCategoryChange(category)}
+                                        className={`px-3 py-1.5 rounded-xl text-sm whitespace-nowrap transition-colors
+                                            ${selectedCategory === category
+                                                ? 'bg-black text-white'
+                                                : 'hover:bg-gray-200'
+                                            }`}
+                                    >
+                                        {category}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Search */}
+                        <div className="relative flex-shrink-0 w-full sm:w-72 lg:w-96">
+                            <input
+                                type="search"
+                                placeholder="Search article..."
+                                value={searchQuery}
+                                onChange={(e) => {
+                                    setSearchQuery(e.target.value);
+                                    setCurrentPage(1);
+                                }}
+                                className="w-full px-4 py-2 bg-yellow-100 text-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-200"
+                            />
+                            <svg className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
                 {/* Blog Posts Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                     {displayedPosts.map((post, index) => (
-                        <article key={index} className="group cursor-pointer">
-                            <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                        <article key={index} className="group cursor-pointer border border-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="relative aspect-[16/10] overflow-hidden">
                                 <Image
                                     src={post.imageUrl}
-                                    alt="Blog post"
+                                    alt={post.title}
                                     layout="fill"
                                     objectFit="cover"
                                     className="transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
-                            <div className="mb-2">
-                                <span className="text-sm text-gray-500">{post.category}</span>
+                            <div className="p-4 space-y-2">
+                                <span className="text-xs text-gray-500">{post.category}</span>
+                                <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-gray-600">
+                                    {post.title}
+                                </h3>
+                                <p className="text-sm text-gray-600 line-clamp-3">
+                                    {post.description}
+                                </p>
+                                <div className="flex items-center justify-between pt-2">
+                                    <span className="text-xs text-gray-500">{post.date}</span>
+                                    <span className="text-xs text-gray-500">{post.readTime} min read</span>
+                                </div>
                             </div>
-                            <h3 className="text-xl font-semibold mb-2 group-hover:text-gray-600 transition-colors">
-                                {post.title}
-                            </h3>
-                            <p className="text-gray-600 text-sm">
-                                {post.description}
-                            </p>
                         </article>
                     ))}
                 </div>
 
                 {/* Pagination */}
-                <div className="flex justify-center items-center gap-2">
+                <div className="flex justify-center items-center gap-2 py-4">
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className={`flex-none w-10 h-10 rounded-xl md:mr-10 flex items-center justify-center border border-gray-300 ${currentPage === 1
-                                ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                : 'bg-white hover:bg-black hover:text-white transition-colors'
-                            }`}
-                        aria-label="Previous page"
+                        className={`p-2 rounded-lg ${currentPage === 1 ? 'text-gray-400' : 'hover:bg-gray-100'}`}
                     >
-                        <ChevronLeft className="w-6 h-6" />
+                        <ChevronLeft className="w-5 h-5" />
                     </button>
+                    
+                    <div className="hidden sm:flex gap-1">
+                        {[...Array(totalPages)].map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => handlePageChange(idx + 1)}
+                                className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm
+                                    ${currentPage === idx + 1
+                                        ? 'bg-black text-white'
+                                        : 'hover:bg-gray-100'
+                                    }`}
+                            >
+                                {idx + 1}
+                            </button>
+                        ))}
+                    </div>
 
-                    <div className="flex justify-center gap-2">
-                        {[...Array(totalPages)].map((_, idx) => {
-                            const pageNumber = idx + 1;
-                            const isCurrentPage = currentPage === pageNumber;
-
-                            return (
-                                <button
-                                    key={idx}
-                                    onClick={() => handlePageChange(pageNumber)}
-                                    className={`w-10 h-10 rounded-xl flex items-center justify-center border border-gray-300 transition-colors ${isCurrentPage
-                                            ? 'bg-black text-white'
-                                            : 'bg-white hover:bg-black hover:text-white'
-                                        }`}
-                                    aria-label={`Go to page ${pageNumber}`}
-                                    aria-current={isCurrentPage ? 'page' : undefined}
-                                >
-                                    {pageNumber}
-                                </button>
-                            );
-                        })}
+                    <div className="sm:hidden">
+                        <span className="text-sm text-gray-600">
+                            Page {currentPage} of {totalPages}
+                        </span>
                     </div>
 
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className={`flex-none md:ml-10 w-10 h-10 rounded-xl flex items-center justify-center border border-gray-300 ${currentPage === totalPages
-                                ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                : 'bg-white hover:bg-black hover:text-white transition-colors'
-                            }`}
-                        aria-label="Next page"
+                        className={`p-2 rounded-lg ${currentPage === totalPages ? 'text-gray-400' : 'hover:bg-gray-100'}`}
                     >
-                        <ChevronRight className="w-6 h-6" />
+                        <ChevronRight className="w-5 h-5" />
                     </button>
                 </div>
             </div>

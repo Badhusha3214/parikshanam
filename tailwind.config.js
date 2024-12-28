@@ -8,18 +8,31 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        elarge: '74px',
-        large: '64px',
-        mid: '48px',
-        cdh: '24px',
-        pch: '22px',
-        normal: '18px',
-        th: '48px',
-        tn: '17px',
-        tsh: '16px',
-        ph: '45px',
-        pn: '17px',
-        psh: '15px',
+        elarge: ['74px', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        large: ['64px', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+        mid: ['48px', { lineHeight: '1.3' }],
+        cdh: ['24px', { lineHeight: '1.4' }],
+        pch: ['22px', { lineHeight: '1.5' }],
+        normal: ['18px', { lineHeight: '1.6' }],
+        th: ['48px', { lineHeight: '1.3' }],
+        tn: ['17px', { lineHeight: '1.6' }],
+        tsh: ['16px', { lineHeight: '1.6' }],
+        ph: ['45px', { lineHeight: '1.3' }],
+        pn: ['17px', { lineHeight: '1.6' }],
+        psh: ['15px', { lineHeight: '1.6' }],
+
+        // Responsive variants
+        'mobile-elarge': ['42px', { lineHeight: '1.1' }],
+        'mobile-large': ['36px', { lineHeight: '1.2' }],
+        'mobile-mid': ['32px', { lineHeight: '1.3' }],
+        'mobile-cdh': ['20px', { lineHeight: '1.4' }],
+        'mobile-th': ['32px', { lineHeight: '1.3' }],
+      },
+      screens:{
+        sm:'600px',
+        md: '728px',
+        lg: '984px',
+        xl: '1240px'
       },
       colors: {
         brand: {

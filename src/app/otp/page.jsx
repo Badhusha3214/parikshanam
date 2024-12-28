@@ -45,7 +45,7 @@ export default function VerifyPage() {
                 <div className="flex w-full items-center justify-center px-6 lg:w-1/2">
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <h1 className="text-5xl font-bold text-center">Verify OTP</h1>
+                            <h1 className="text-large font-bold text-center">Verify OTP</h1>
                             <p className="text-gray-600 text-center">
                                 An OTP has been sent to your provided Phone Number. Verify the OTP to proceed further.
                             </p>
@@ -58,7 +58,7 @@ export default function VerifyPage() {
                                     id={`otp-${index}`}
                                     type="text"
                                     maxLength={1}
-                                    className="w-14 h-14 text-center text-2xl border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                    className="w-14 h-14 text-center text-mid border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                     value={digit}
                                     onChange={(e) => handleChange(index, e.target.value)}
                                 />
