@@ -6,7 +6,7 @@ export default function LoginPage() {
     return (
         <>
             <Navbar />
-            <div className="flex min-h-screen">
+            <div className="flex mt-14 min-h-screen">
                 {/* Left Section */}
                 <div className="relative hidden w-1/2 bg-[#FFF9F0] lg:block">
                     <div className="absolute left-12 top-24 bg-white p-10 z-10">

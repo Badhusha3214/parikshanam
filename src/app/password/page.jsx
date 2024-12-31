@@ -29,7 +29,7 @@ export default function CreatePasswordPage() {
     return (
         <>
             <Navbar />
-            <div className="flex min-h-screen">
+            <div className="flex mt-14 min-h-screen">
                 <div className="relative hidden w-1/2 bg-[#FFF9F0] lg:block">
                     <div className="absolute inset-0 z-0 bg-[url('/pass.svg')] bg-cover bg-center opacity-100"></div>
                 </div>
