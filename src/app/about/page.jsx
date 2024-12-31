@@ -10,43 +10,42 @@ export default function About() {
     return (
         <main className="min-h-screen">
             <Navbar />
-            {/* Hero Section */}
-            <div className="min-h-screen flex relative">
-                {/* Left Column */}
-                <div className=" flex flex-col justify-center max-w-7xl mx-auto pl-20">
-                    <h1 className="text-8xl font-bold text-gray-700 mb-4">Pioneering Progress.</h1>
-                    <h2 className="text-8xl font-bold text-black mb-8">With every step.</h2>
-                    <p className="text-gray-600 mb-8">
-                        Lacinia ornare magna penatibus adipiscing laoreet tempus.
-                        Lacinia ornare magna penatibus adipiscing laoreet tempus.<br></br>
 
-                        Tortor praesent semper arcu facilisis class eget mauris
-                        lobortis.
+            {/* Hero Section */}
+            <section className="min-h-screen mt-16 flex flex-col lg:flex-row relative px-4 sm:px-6 lg:px-0 pt-4 sm:pt-4 lg:px-0 mb-[40px] sm:mb-[50px] lg:mb-[100px]">
+                {/* Left Column */}
+                <div className="flex flex-col justify-center w-full lg:w-1/2 max-w-7xl mx-auto  lg:pl-8 xl:pl-20 py-0 lg:py-0">
+
+                    <h1 className="text-large sm:text-th xl:text-elarge font-bold max-w-3xl leading-none">
+                        <span className="text-gray-700">Pioneering Progress </span><span className="text-fontColor-heading">With every step.</span>
+                    </h1>
+                    <p className="text-normal text-fontColor-primary mt-8 mb-8 max-w-2xl">
+                        Lacinia ornare magna penatibus adipiscing laoreet tempus.
+                        Lacinia ornare magna penatibus adipiscing laoreet tempus.
+                        Tortor praesent semper arcu facilisis class eget mauris lobortis.
                     </p>
-                    <div className="flex gap-4">
-                        <button className="bg-yellow-400 px-6 py-3 rounded-md font-medium">Join Us</button>
-                        <button className="border-2 border-black px-6 py-3 rounded-md font-medium flex items-center">
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <button className="bg-brand px-6 lg:px-8 xl:px-10 py-3  font-medium text-fontColor-heading">Join Us</button>
+                        <button className="border-2 border-fontColor-heading px-10 lg:px-12 xl:px-16 py-3  font-medium flex items-center justify-center sm:justify-start">
                             Our Industry Resources
                             <span className="ml-2">→</span>
                         </button>
                     </div>
                 </div>
-                <div className="w-1/2 relative">
+                <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto relative mt-8 lg:mt-0">
                     <Image
-                        src="/replace.svg"
+                        src="/replace.png"
                         alt="About Hero"
                         fill
                         className="object-cover"
                     />
                 </div>
-            </div>
-
-
+            </section>
 
             {/* History Section */}
-            <div className="min-h-screen max-w-7xl mx-auto px-8 flex items-center">
-                <div className="grid md:grid-cols-2 gap-12">
-                    <div className="flex items-center h-[600px]">
+            <section className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[20px] sm:py-[25px] lg:py-[50px]">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                    <div className="flex items-center h-[300px] sm:h-[400px] lg:h-[600px]">
                         <Image
                             src="/image 17.svg"
                             alt="Our Team"
@@ -56,132 +55,114 @@ export default function About() {
                         />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-4xl font-bold mb-8">History Of IAM</h2>
-                        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                        <h2 className="text-th font-bold mb-6 lg:mb-8 text-fontColor-heading">History Of IAM</h2>
+                        <p className="text-normal text-fontColor-primary mb-8 leading-relaxed">
                             Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent
                             semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae
                             velit, molestie maximus et. Efficitur aliquet at dictum, taciti vulputate
-                            sociosqu nibh. Maximus dui aptent id netus elit mi condimentum taciti
-                            parturient. Facilisis pharetra pellentesque proin habitasse aenean nisl lorem.
-                            Vel per condimentum sit interdum aenean quis.Lacinia ornare magna
-                            penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis
-                            class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus
-                            et. Efficitur aliquet at dictum, taciti vulputate sociosqu nibh. Maximus dui
-                            aptent id netus elit mi condimentum taciti parturient. Facilisis pharetra
-                            pellentesque proin habitasse aenean nisl lorem. Vel per condimentum sit
-                            interdum aenean.
+                            sociosqu nibh.
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Purpose Section */}
-            <WhyIAM />
+            {/* Purpose, Journey, and Core Values sections */}
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <WhyIAM className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
+            </section>
 
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <IAMJourney className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
+            </section>
 
-            {/* Journey Timeline */}
-            <IAMJourney />
-
-            {/* Core Values */}
-            <CoreValues />
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <CoreValues className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
+            </section>
 
             {/* Team Section */}
-            <div className="max-w-7xl mx-auto px-8 py-20">
-                <h2 className="text-6xl text-center font-bold mb-8">Our Core team</h2>
-                <p className="text-center text-gray-600 text-xl mb-12">
-                    Lacinia ornare magna penatibus adipiscing laoreet tempus.<br />
-                    Tortor praesent semper arcu facilisis class eget mauris
-                </p>
-                <div className="grid md:grid-cols-4 gap-6">
-                    {[
-                        { name: "James Patterson", role: "President", image: "/james.png" },
-                        { name: "Sophia Martinez", role: "Secretary", image: "/james.png" },
-                        { name: "Liam Johnson", role: "Treasurer", image: "/james.png" },
-                        { name: "Olivia Wilson", role: "Additional Secretary", image: "/james.png" },
-                        { name: "Emily Davis", role: "Creative Executive", image: "/james.png" },
-                        { name: "Pedro Rodriguez", role: "Events Coordinator", image: "/james.png" },
-                        { name: "Claire Allen", role: "Social Coordinator", image: "/james.png" },
-                        { name: "Michael Brown", role: "Sports Coordinator", image: "/james.png" },
-                    ].map((member, index) => (
-                        <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                            <div className="relative h-72">
-                                <Image
-                                    src={member.image}
-                                    alt={member.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                                    <h3 className="font-bold text-lg text-white">{member.name}</h3>
-                                    <p className="text-gray-200">{member.role}</p>
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-large sm:text-th text-center font-bold mb-6 text-fontColor-heading">Our Core team</h2>
+                    <p className="text-center text-fontColor-primary text-normal sm:text-pch mb-12">
+                        Lacinia ornare magna penatibus adipiscing laoreet tempus.<br className="hidden sm:block" />
+                        Tortor praesent semper arcu facilisis class eget mauris
+                    </p>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {[
+                            { name: "James Patterson", role: "President", image: "/james.png" },
+                            // ... other team members
+                        ].map((member, index) => (
+                            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                                <div className="relative h-64 sm:h-72">
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                                        <h3 className="font-bold text-lg text-white">{member.name}</h3>
+                                        <p className="text-gray-200">{member.role}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </section>
 
             {/* Insights Section */}
-            <div className="min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-8">
-                <h2 className="text-6xl font-bold text-center mb-8">IAM Insights</h2>
-                <p className="text-center text-gray-600 mb-20 max-w-3xl mx-auto text-xl">
-                    Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class.
-                </p>
-                
-                <div className="grid md:grid-cols-3 gap-12 mb-20">
-                    <div className="text-center">
-                        <h3 className="text-6xl font-bold mb-4">20%</h3>
-                        <h4 className="text-2xl font-semibold mb-4">Increased Recognitions</h4>
-                        <p className="text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                    <div className="text-center">
-                        <h3 className="text-6xl font-bold mb-4">15%</h3>
-                        <h4 className="text-2xl font-semibold mb-4">More Networking</h4>
-                        <p className="text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                    <div className="text-center">
-                        <h3 className="text-6xl font-bold mb-4">89%</h3>
-                        <h4 className="text-2xl font-semibold mb-4">Average ROI Return</h4>
-                        <p className="text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                </div>
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <div className="min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-large sm:text-th font-bold text-center mb-6 lg:mb-8 text-fontColor-heading">IAM Insights</h2>
+                    <p className="text-center text-fontColor-primary mb-16 lg:mb-20 max-w-3xl mx-auto text-normal sm:text-pch">
+                        Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class.
+                    </p>
 
-                <div className="grid md:grid-cols-3 gap-12">
-                    <div className="text-center">
-                        <h3 className="text-6xl font-bold mb-4">250+</h3>
-                        <h4 className="text-2xl font-semibold mb-4">Satisfied Members</h4>
-                        <p className="text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                    <div className="text-center">
-                        <h3 className="text-6xl font-bold mb-4">15+</h3>
-                        <h4 className="text-2xl font-semibold mb-4">Workshops Organised</h4>
-                        <p className="text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                    <div className="text-center">
-                        <h3 className="text-6xl font-bold mb-4">30%</h3>
-                        <h4 className="text-2xl font-semibold mb-4">Increased Client Acquisition</h4>
-                        <p className="text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16 lg:mb-20">
+                        <StatBlock number="20%" title="Increased Recognitions" />
+                        <StatBlock number="15%" title="More Networking" />
+                        <StatBlock number="89%" title="Average ROI Return" />
+
+                        <StatBlock number="250+" title="Satisfied Members" />
+                        <StatBlock number="15+" title="Workshops Organised" />
+                        <StatBlock number="30%" title="Increased Client Acquisition" />
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Ready to Join Section */}
-            <div className="min-h-screen flex items-center justify-center px-8">
-                <div className="bg-gray-50 rounded-xl py-24 px-12 text-center max-w-7xl w-full">
-                    <h2 className="text-7xl font-bold mb-8">Ready to join?</h2>
-                    <p className="text-gray-600 mb-12 max-w-3xl mx-auto text-2xl">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    </p>
-                    <div className="flex gap-6 justify-center">
-                        <button className="bg-yellow-400 px-10 py-5 rounded-md text-xl font-medium">Sign Up</button>
-                        <button className="bg-black text-white px-10 py-5 rounded-md text-xl font-medium">View Plans</button>
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+                    <div className="bg-gray-50 rounded-xl py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 text-center max-w-7xl w-full">
+                        <h2 className="text-large sm:text-th xl:text-elarge font-bold mb-6 lg:mb-8 text-fontColor-heading">Ready to join?</h2>
+                        <p className="text-fontColor-primary mb-8 lg:mb-12 max-w-3xl mx-auto text-normal sm:text-pch lg:text-xl">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                            <button className="bg-brand px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-md text-lg sm:text-xl font-medium text-fontColor-heading">Sign Up</button>
+                            <button className="bg-fontColor-heading text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-md text-lg sm:text-xl font-medium">View Plans</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Articles Section */}
-            <BlogArticle />
+            {/* Blog Articles Section */}
+            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+                <BlogArticle />
+            </section>
+
+            {/* Footer */}
             <FooterSection />
         </main>
     )
 }
+
+// Helper component for stats
+const StatBlock = ({ number, title }) => (
+    <div className="text-center">
+        <h3 className="text-large sm:text-th font-bold mb-4 text-fontColor-heading">{number}</h3>
+        <h4 className="text-cdh font-semibold mb-4 text-fontColor-sub-heading">{title}</h4>
+        <p className="text-normal text-fontColor-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+    </div>
+);

@@ -6,7 +6,7 @@ export default function LoginPage() {
     return (
         <>
             <Navbar />
-            <div className="flex min-h-screen">
+            <div className="flex mt-14 min-h-screen">
                 {/* Left Section */}
                 <div className="relative hidden w-1/2 bg-[#FFF9F0] lg:block">
                     <div className="absolute left-12 top-24 bg-white p-10 z-10">
@@ -60,7 +60,7 @@ export default function LoginPage() {
                 <div className="flex w-full items-center justify-center px-6 lg:w-1/2">
                     <div className="w-full max-w-md space-y-8">
                         <div className="space-y-2">
-                            <h1 className="text-3xl font-bold">Welcome Back</h1>
+                            <h1 className="text-large font-bold">Welcome Back</h1>
                         </div>
 
                         <form className="space-y-6">

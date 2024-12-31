@@ -37,7 +37,7 @@ export default function VerifyPage() {
     return (
         <>
             <Navbar />
-            <div className="flex min-h-screen">
+            <div className="flex mt-14 min-h-screen">
                 <div className="relative hidden w-1/2 bg-[#FFF9F0] lg:block">
                     <div className="absolute inset-0 z-0 bg-[url('/otp.svg')] bg-cover bg-center opacity-100"></div>
                 </div>
@@ -45,7 +45,7 @@ export default function VerifyPage() {
                 <div className="flex w-full items-center justify-center px-6 lg:w-1/2">
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <h1 className="text-5xl font-bold text-center">Verify OTP</h1>
+                            <h1 className="text-large font-bold text-center">Verify OTP</h1>
                             <p className="text-gray-600 text-center">
                                 An OTP has been sent to your provided Phone Number. Verify the OTP to proceed further.
                             </p>
@@ -58,7 +58,7 @@ export default function VerifyPage() {
                                     id={`otp-${index}`}
                                     type="text"
                                     maxLength={1}
-                                    className="w-14 h-14 text-center text-2xl border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                    className="w-14 h-14 text-center text-mid border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                     value={digit}
                                     onChange={(e) => handleChange(index, e.target.value)}
                                 />

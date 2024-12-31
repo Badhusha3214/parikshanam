@@ -6,6 +6,7 @@ import Navbar from './components/navbar';
 import IAMMemberPerks from './components/member';
 import { FooterSection } from './components/footer';
 import IamPeople from './components/iampeople';
+import IndustryResources from './components/best';
 import SubscriptionSection from './components/subscription';
 
 const IAMNextPage = () => {
@@ -13,287 +14,385 @@ const IAMNextPage = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
 
-      <div className="relative h-screen">
+      {/* Hero Section - Fully Responsive */}
+      <div className="relative h-screen flex items-center">
         <Image
           src="/1111.png"
           alt="Background"
           fill
           priority
-          className="object-cover"
+          className="object-cover absolute inset-0 z-0"
           quality={100}
         />
-        <div className="absolute inset-0  z-0"></div>
-        <div className="relative z-10 flex md:ml-24 flex-col items-start justify-center h-full px-4 md:px-10 text-white">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 md:mb-6">IAM: Empowering</h1>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2">Indian Ad Film Makers</h1>
-          <p className='my-4 md:my-8 text-sm md:text-base w-full md:w-1/3'>Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.</p>
-          <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-            <button className="bg-yellow-400 text-gray-900 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base font-bold hover:bg-yellow-500 w-full sm:w-auto">Join Us</button>
-            <button className="bg-gray-800 text-white px-6 md:px-8 py-2 md:py-3 text-sm md:text-base border border-yellow-400 hover:bg-gray-700 w-full sm:w-auto">Our Industry Resources</button>
+        <div className="relative z-10 container mx-auto px-4 text-white">
+          <div className="max-w-3xl space-y-4">
+            <h1 className="text-[50px] sm:text-[55px] md:text-large lg:text-elarge font-bold leading-tight">
+              IAM: Empowering Indian Ad Film Makers
+            </h1>
+            <p className="text-sm xs:text-pn sm:text-tn md:text-normal opacity-90 max-w-lg">
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full max-w-md">
+              <button className="w-full sm:w-auto bg-yellow-400 text-gray-900 px-6 py-3 font-bold  text-tn md:text-normal  hover:bg-yellow-500 transition">
+                Join Us
+              </button>
+              <button className="w-full sm:w-auto text-white px-6 py-3 border border-yellow-400 text-tn md:text-normal  hover:bg-white/10 transition">
+                Our Industry Resources
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Who IAM? */}
-      <div className="w-full overflow-x-hidden">
-        <main className="px-10 py-10 md:pt-32 md:pl-32 ">
-          <section className="flex flex-col md:flex-row space-y-10 md:space-x-32">
-            <div className='md:w-1/2'>
-              <Image src="/margin.svg" alt="IAM" width={990} height={900} />
+      {/* Who IAM? Section - Responsive Layout */}
+      <main className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 xl:py-32">
+        <section className="grid grid-cols-1 lg:grid-cols-2 sm:gap-1 gap-6 lg:gap-12 items-center">
+          <div className="lg:order-1 flex justify-center lg:justify-start">
+            <Image
+              src="/Marginn.svg"
+              alt="IAM"
+              width={990}
+              height={900}
+              className="w-full max-w-md lg:max-w-lg xl:max-w-2xl h-auto xs:-mb-2 md:mb-6 lg:mb-0"
+            />
+          </div>
+          <div className="lg:order-2 text-center lg:text-left space-y-4">
+            <h2 className="text-ph sm:text-th lg:text-large xl:text-elarge font-light mb-3">
+              Who <span className="font-bold">IAM?</span>
+            </h2>
+            <p className="text-pn sm:text-tn md:text-normal text-gray-700 mb-6 mx-auto lg:mx-0 max-w-prose">
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
+            </p>
+            <button className="mx-auto lg:mx-0 flex items-center justify-center bg-yellow-400 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-yellow-500 transition">
+              <span>Learn More</span>
+              <Image
+                src="/arrow.svg"
+                alt="Learn More"
+                width={190}
+                height={100}
+                className="w-4 sm:w-5 ml-2 h-auto"
+              />
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <WhyIAM />
+
+      {/* Our Initiatives Section - Responsive Cards */}
+      <div className="container mx-auto px-4 py-16 md:py-32">
+        <div className="text-center mb-16">
+          <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 rounded-xl text-pn sm:text-tn md:text-normal sm mb-4">
+            Our Services
+          </span>
+          <h2 className="text-ph sm:text-th lg:text-large xl:text-large font-bold">Our Initiatives</h2>
+        </div>
+
+        <div className="space-y-16">
+          {[
+            {
+              title: "Expert Talks & Workshops",
+              description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
+              image: "/1.svg",
+              reversed: false
+            },
+            {
+              title: "Social Impact",
+              description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
+              image: "/2.svg",
+              reversed: true
+            },
+            {
+              title: "IAM Responsible Awards",
+              description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
+              image: "/3.svg",
+              reversed: false
+            }
+          ].map((initiative, index) => (
+            <div
+              key={index}
+              className={`grid md:grid-cols-2 gap-8 items-center ${initiative.reversed ? 'md:grid-cols-2-reverse' : ''
+                }`}
+            >
+              <div className={`${initiative.reversed ? 'md:order-2' : ''}`}>
+                <Image
+                  src={initiative.image}
+                  alt={initiative.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-xl"
+                />
+              </div>
+              <div className={`${initiative.reversed ? 'md:order-1' : ''}`}>
+                <h3 className="text-pch sm:text-pch lg:text-cdh xl:text-cdh font-bold mb-4">
+                  {initiative.title}
+                </h3>
+                <p className="text-pn  md:text-normal sm:text-tn text-gray-700 mb-6">
+                  {initiative.description}
+                </p>
+                <button className="flex items-center text-pn sm:text-tn md:text-normal border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition">
+                  Learn More
+                  <Image
+                    src="/NextButton.svg"
+                    alt="arrow"
+                    width={20}
+                    height={20}
+                    className="ml-2"
+                  />
+                </button>
+              </div>
             </div>
-            <div className='md:w-1/2 md:py-28'>
-              <h2 className="text-7xl font-light mb-5">Who <span className='font-bold'>IAM?</span></h2>
-              <p className='text-2xl md:w-3/4 mt-8 py-2 text-gray-700'>Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et. Efficitur aliquet at dictum, taciti vulputate sociosqu nibh. Maximus dui aptent id netus elit mi condimentum taciti parturient. Facilisis pharetra pellentesque proin habitasse aenean nisl lorem. Vel per condimentum sit interdum.</p>
-              <button className="bg-yellow-400 mt-8 font-bold text-gray-900 px-8 py-3 flex items-center space-x-2 hover:bg-yellow-500">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+          ))}
+        </div>
+      </div>
+
+      {/* Industry Resources Section - Responsive Layout
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-left mb-12">
+          <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 rounded-xl text-sm mb-4">
+            Our Industry Resources
+          </span>
+          <h2 className="text-4xl md:text-6xl font-bold">Choose From The Best</h2>
+          <p className="text-base md:text-xl text-gray-700 mt-4 max-w-6xl">
+            Lacinia ornare magna penatubus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris.
+            Lacinia ornare magna penatubus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            {[
+              {
+                title: "Model Bank",
+                description: "Lacinia ornare magna penatibus adipiscing laoreet tempus.",
+                borderColor: "border-yellow-400"
+              },
+              {
+                title: "Preferred Partners",
+                description: "Lacinia ornare magna penatibus adipiscing laoreet tempus.",
+                borderColor: "border-gray-200"
+              },
+              {
+                title: "Aspiring Technicians",
+                description: "Lacinia ornare magna penatibus adipiscing laoreet tempus.",
+                borderColor: "border-gray-200"
+              }
+            ].map((resource, index) => (
+              <div
+                key={index}
+                className={`border-l-4 p-6 ${resource.borderColor}  transition`}
+              >
+                <h3 className="text-xl md:text-2xl font-bold mb-4">
+                  {resource.title}
+                </h3>
+                <p className="text-sm md:text-base text-gray-700 mb-4">
+                  {resource.description}
+                </p>
+                <button className="flex items-center border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition">
+                  Learn More
+                  <Image
+                    src="/NextButton.svg"
+                    alt="arrow"
+                    width={20}
+                    height={20}
+                    className="ml-2"
+                  />
+                </button>
+              </div>
+            ))}
+          </div>
+          <div className="hidden md:block">
+            <Image
+              src="/OIR.svg"
+              alt="OIR"
+              width={500}
+              height={400}
+              className="w-4/5 h-auto rounded-xl"
+            />
+          </div>
+        </div>
+      </div> */}
+
+      <IndustryResources/>
+
+      <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-32 items-center">
+          {/* Image Column - Responsive Order */}
+          <div className="order-2 md:order-1 flex justify-center">
+            <Image
+              src="/join.svg"
+              alt="IAM"
+              width={800}
+              height={800}
+              className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto"
+            />
+          </div>
+
+          {/* Content Column - Responsive Order */}
+          <div className="order-1 md:order-2 text-center md:text-left">
+            {/* Tag */}
+            <span className="inline-block border-2 border-gray-400 font-bold px-4 sm:px-6 py-1 sm:py-2 rounded-xl text-pn sm:text-tn md:text-normal mb-3 sm:mb-4">
+              Join IAM
+            </span>
+
+            {/* Heading - Responsive Sizing */}
+            <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4 sm:mb-6">
+              Become an IAMian
+            </h2>
+
+            {/* Paragraph - Responsive Sizing */}
+            <p className="text-pn sm:text-tn md:text-normal text-gray-700 mb-6 sm:mb-8 max-w-prose mx-auto md:mx-0">
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.
+              Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.
+              Lacinia ornare magna penatibus adipiscing laoreet tempus.
+            </p>
+
+            {/* Buttons - Responsive Layout */}
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+              <button className="w-full sm:w-auto bg-yellow-400 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 text-pn sm:text-tn md:text-normal font-medium rounded-lg hover:bg-yellow-500 transition">
+                Sign Up
+              </button>
+              <button className="w-full sm:w-auto bg-black text-white px-4 sm:px-6 py-2 sm:py-3 font-medium text-pn sm:text-tn md:text-normal rounded-lg hover:bg-gray-800 transition">
+                View Plans
               </button>
             </div>
-          </section>
-        </main>
-
-        <WhyIAM />
-
-        {/* Our Initiatives */}
-        <div className="bg-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <span className='text-lg border-2 border-gray-400 font-bold px-6 py-2 rounded-xl inline-block'>Our Services</span>
-              <h1 className='text-6xl font-bold mt-6'>Our Initiatives</h1>
-            </div>
-
-            <div className="flex flex-col md:space-y-40 space-y-10 max-w-8xl mx-auto">
-              <div className="flex flex-col md:flex-row items-start bg-white rounded-xl  overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
-                <div className="w-full md:w-1/2 h-68 md:h-auto">
-                  <img src="/1.svg" alt="Expert Talks & Workshops" className="w-full h-full object-cover" />
-                </div>
-                <div className="w-full md:w-1/2 sm:ml-8 sm:pt-0 p-8 md:px-12">
-                  <h3 className="text-2xl md:text-3xl font-bold top-0 mb-4">Expert Talks & Workshops</h3>
-                  <p className="text-gray-700  text-xl md:text-2xl mb-6">Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et. Efficitur aliquet at dictum, taciti vulputate sociosqu nibh. Maximus dui aptent id netus elit mi condimentum taciti parturient. Facilisis pharetra pellentesque proin habitasse aenean nisl lorem. Vel per condimentum sit interdum aenean quis.</p>
-                  <button className=" flex items-center border-2 border-gray-400 text-black font-bold py-2 pl-8 rounded-full hover:bg-gray-100 transition-colors">Learn More
-                    <img src="/Next.svg" alt="arrow" className="w-5 h-5 mx-4" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row-reverse items-start bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
-                <div className="w-full md:w-1/2 h-68 md:h-auto">
-                  <img src="/2.svg" alt="Social Impact" className="w-full h-full object-cover" />
-                </div>
-                <div className="w-full md:w-1/2 sm:ml-0  sm:pt-0 p-8 md:pr-112 text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold top-0 mb-4">Social Impact</h3>
-                  <p className="text-gray-700 text-xl md:text-2xl mb-6">Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et. Efficitur aliquet at dictum, taciti vulputate sociosqu nibh. Maximus dui aptent id netus elit mi condimentum taciti parturient. Facilisis pharetra pellentesque proin habitasse aenean nisl lorem. Vel per condimentum sit interdum aenean quis.</p>
-                  <button className="flex items-center border-2 border-gray-400 text-black font-bold py-2 pl-8 rounded-full hover:bg-gray-100 transition-colors">Learn More
-                    <img src="/Next.svg" alt="arrow" className="w-5 h-5 mx-4" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row items-start bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
-                <div className="w-full md:w-1/2 h-68 md:h-auto">
-                  <img src="/3.svg" alt="IAM Responsible Awards" className="w-full h-full object-cover" />
-                </div>
-                <div className="w-full md:w-1/2 sm:ml-8 sm:pt-0 p-8 md:px-12">
-                  <h3 className="text-2xl md:text-3xl font-bold top-0 mb-4">IAM Responsible Awards</h3>
-                  <p className="text-gray-700 text-xl md:text-2xl mb-6">Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et. Efficitur aliquet at dictum, taciti vulputate sociosqu nibh. Maximus dui aptent id netus elit mi condimentum taciti parturient. Facilisis pharetra pellentesque proin habitasse aenean nisl lorem. Vel per condimentum sit interdum aenean quis.</p>
-                  <button className="flex items-center border-2 border-gray-400 text-black font-bold py-2 pl-8 rounded-full hover:bg-gray-100 transition-colors">Learn More
-                    <img src="/Next.svg" alt="arrow" className="w-5 h-5 mx-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-        {/* Industry Resources */}
-        <div className="bg-white pt-20 md:-ml-48">
-          <div className="container mx-auto px-4">
-            <div className="text-left mb-16">
-              <span className='text-lg border-2 border-gray-400 font-bold px-6 py-2 rounded-xl inline-block'>Our Industry Resources</span>
-              <h1 className='text-5xl md:text-6xl font-bold mt-6'>Choose From The Best</h1>
-              <p className="my-4 font-medium  text-lg md:text-2xl text-gray-700">
-                Lacinia ornare magna penatubus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris.<br></br> Tortor praesent semper arcu facilisis class eget mauris.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center p-4 md:p-8 mb-20 -mt-10 md:px-52 ">
-          <div className="w-full md:flex-1 md:mr-8 mb-8 md:mb-0">
-            <div className="flex flex-col items-start bg-white overflow-hidden transform transition-all duration-300">
-              <div className="w-full flex-1 p-6 md:p-8 border-l-4 border-yellow-400">
-                <h2 className="text-xl md:text-2xl font-bold mb-4">Model Bank</h2>
-                <p className="mb-4 text-sm md:text-base">
-                  Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris.
-                </p>
-                <button className="flex items-center border-2 border-gray-400 text-black font-bold py-2 pl-4 md:pl-8 rounded-full hover:bg-gray-100 transition-colors text-sm md:text-base">
-                  Learn More
-                  <img src="/Next.svg" alt="arrow" className="w-4 h-4 md:w-5 md:h-5 mx-2 md:mx-4" />
-                </button>
-              </div>
+        </section>
+      </main>
 
-              <div className="w-full flex-1 p-6 md:p-8 border-l-4 border-gray-200">
-                <h2 className="text-xl md:text-2xl font-bold mb-4">Preferred Partners</h2>
-                <p className="mb-4 text-sm md:text-base">
-                  Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris.
-                </p>
-                <button className="flex items-center border-2 border-gray-400 text-black font-bold py-2 pl-4 md:pl-8 rounded-full hover:bg-gray-100 transition-colors text-sm md:text-base">
-                  Learn More
-                  <img src="/Next.svg" alt="arrow" className="w-4 h-4 md:w-5 md:h-5 mx-2 md:mx-4" />
-                </button>
-              </div>
-
-              <div className="w-full flex-1 p-6 md:p-8 border-l-4 border-gray-200">
-                <h2 className="text-xl md:text-2xl font-bold mb-4">Aspiring Technicians</h2>
-                <p className="mb-4 text-sm md:text-base">
-                  Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris.
-                </p>
-                <button className="flex items-center border-2 border-gray-400 text-black font-bold py-2 pl-4 md:pl-8 rounded-full hover:bg-gray-100 transition-colors text-sm md:text-base">
-                  Learn More
-                  <img src="/Next.svg" alt="arrow" className="w-4 h-4 md:w-5 md:h-5 mx-2 md:mx-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full md:flex-1 flex justify-center md:justify-end mb-8 md:mb-0">
-            <img src="/OIR.svg" alt="OIR" className="w-full max-w-md md:max-w-full h-auto rounded-xl" />
-          </div>
-        </div>
-
-        <main className="px-10 py-10 md:pt-32 md:px-32">
-          <section className="flex flex-col md:flex-row space-y-10 md:space-x-32">
-            <div className='md:w-1/2 md:ml-24'>
-              <Image src="/join.svg" alt="IAM" width={800} height={800} />
-            </div>
-            <div className='md:w-1/2 md:py-28'>
-              <div className="container mx-auto">
-                <div className="text-left mb-16">
-                  <span className='text-lg border-2 border-gray-400 font-bold px-6 py-2 rounded-xl inline-block'>Join IAM</span>
-                  <h1 className='text-6xl font-bold mt-6'>Become an IAMian</h1>
-                  <p className='text-xl md:w-3/4 mt-8 py-2 text-gray-700'>Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et. Efficitur aliquet at dictum, taciti vulputate sociosqu nibh. Maximus dui aptent id netus elit mi condimentum taciti parturient. Facilisis pharetra pellentesque proin habitasse aenean nisl lorem. Vel per condimentum sit interdum.</p>
-                  <div className="flex space-x-4 mt-4">
-                    <button className="bg-yellow-400 font-bold text-gray-900 px-8 py-3 flex items-center space-x-2 hover:bg-yellow-500">
-                      Sign Up
-                    </button>
-                    <button className="bg-black font-bold text-white px-8 py-3 flex items-center space-x-2 hover:bg-yellow-500">
-                      View Plans
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-
-
-        <IAMMemberPerks />
-
-        <SubscriptionSection />
-
-        <IamPeople />
-
-        {/* Contact Section */}
-        <div className="mx-4 md:mx-20 px-2 md:px-4 py-20 md:py-40 flex flex-col md:flex-row gap-10 md:gap-20">
+      {/* Remaining Sections */}
+      <IAMMemberPerks />
+      <SubscriptionSection />
+      <IamPeople />
+      <div className="container mx-auto px-4 py-8 sm:py-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Section - Black Box */}
-          <div className="w-full md:w-1/2 bg-black text-white rounded-2xl p-6 md:p-16 min-h-[500px] md:min-h-[600px]">
-            <h2 className="text-4xl md:text-7xl font-bold mb-4 md:mb-8">Say Hi to IAM</h2>
-            <p className="mb-8 md:mb-12 text-base md:text-xl leading-relaxed max-w-3xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+          <div className="bg-black text-white rounded-2xl p-6 sm:p-8 lg:p-12">
+            <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4 sm:mb-6">
+              Say Hi to IAM
+            </h2>
+            <p className="text-pn sm:text-tn md:text-normal opacity-90 mb-6 sm:mb-8 max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            
-            <div className="space-y-4 md:space-y-6 text-sm md:text-base">
-              <div className="flex items-center gap-3">
-                <img src="/Frame (4).svg" alt="Location" className="w-6 h-6" />
-                <p>On Stage, Near Mc Donalds, Palarivattom, 
-                   Chakkaraparambu, Ernakulam, Kerala 683032, India</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <img src="/Frame (5).svg" alt="Phone" className="w-6 h-6" />
-                <p>+91 484 4148269</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <img src="/Frame (6).svg" alt="Email" className="w-6 h-6" />
-                <a href="mailto:indianadfilmmakers@gmail.com" className="underline">
-                  indianadfilmmakers@gmail.com
-                </a>
-              </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  icon: "/Frame (4).svg",
+                  text: "On Stage, Near Mc Donalds, Palarivattom, Chakkaraparambu, Ernakulam, Kerala 683032, India"
+                },
+                {
+                  icon: "/Frame (5).svg",
+                  text: "+91 484 4148269"
+                },
+                {
+                  icon: "/Frame (6).svg",
+                  text: "indianadfilmmakers@gmail.com",
+                  isLink: true
+                }
+              ].map((contact, index) => (
+                <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                  <Image
+                    src={contact.icon}
+                    alt="Contact Icon"
+                    width={24}
+                    height={24}
+                    className="mt-1 flex-shrink-0"
+                  />
+                  {contact.isLink ? (
+                    <a
+                      href={`mailto:${contact.text}`}
+                      className="underline text-pn sm:text-tn md:text-normal"
+                    >
+                      {contact.text}
+                    </a>
+                  ) : (
+                    <p className="text-pn sm:text-tn md:text-normal">{contact.text}</p>
+                  )}
+                </div>
+              ))}
             </div>
 
-            <div className="mt-6 md:mt-8 flex items-center justify-left">
-              <img 
-                src="/Avatar group.svg" 
+            <div className="mt-6 sm:mt-8 flex items-center space-x-3 sm:space-x-4">
+              <Image
+                src="/Avatar group.svg"
                 alt="Expert Professionals"
-                className="w-32 md:w-auto md:pr-10"
+                width={120}
+                height={40}
               />
-              <p className="ml-2 md:ml-4 text-sm md:text-base">More than 1000+ Expert Professionals</p>
+              <p className="text-pn sm:text-tn md:text-normal">
+                More than 1000+ Expert Professionals
+              </p>
             </div>
           </div>
 
           {/* Right Section - Contact Form */}
-          <div className="w-full md:w-1/2">
-            <form className="space-y-4">
+          <div className="w-full">
+            <form className="mb-2 space-y-4">
               <div>
-                <label className="block text-xl md:text-2xl font-medium mb-2">
+                <label className="block text-pch sm:text-pch md:text-cdh mt-2 font-medium mb-2">
                   Email <span className="text-red-500">*</span>
                 </label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="Enter your email"
-                  className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                  className="w-full p-2 sm:p-3 border rounded-lg text-sm sm:text-base"
                   required
                 />
               </div>
 
-              <div className="">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xl md:text-2xl font-medium mb-2">
+                  <label className="block text-pch sm:text-pch md:text-cdh font-medium mb-2">
                     First name <span className="text-red-500">*</span>
                   </label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="Enter your first name"
-                    className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                    className="w-full p-2 sm:p-3 border rounded-lg text-sm sm:text-base"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-xl md:text-2xl mt-2 font-medium mb-2">
+                  <label className="block text-pch sm:text-pch md:text-cdh font-medium mb-2">
                     Last name <span className="text-red-500">*</span>
                   </label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="Enter your last name"
-                    className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                    className="w-full p-2 sm:p-3 border rounded-lg text-sm sm:text-base"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xl md:text-2xl font-medium mb-2">
+                <label className="block text-pch sm:text-pch md:text-cdh font-medium mb-2">
                   Phone number <span className="text-red-500">*</span>
                 </label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   placeholder="Enter your phone number"
-                  className="w-full p-2 md:p-3 border rounded-lg text-sm md:text-base"
+                  className="w-full p-2 sm:p-3 border rounded-lg text-sm sm:text-base"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-xl md:text-2xl font-medium mb-2">Message</label>
-                <textarea 
+                <label className="block text-pch sm:text-pch md:text-cdh font-medium mb-2">Message</label>
+                <textarea
                   placeholder="Enter your message"
-                  className="w-full p-2 md:p-3 border rounded-lg h-24 md:h-32 text-sm md:text-base"
+                  className="w-full p-2 sm:p-3 border rounded-lg h-20 sm:h-24 text-sm sm:text-base"
                 />
               </div>
 
-              <button 
+              <button
                 type="submit"
-                className="w-full md:w-auto bg-yellow-400 text-black font-bold px-6 md:px-8 py-2 md:py-3 rounded-lg hover:bg-yellow-500 text-sm md:text-base"
+                className="w-full sm:w-auto bg-yellow-400 text-black font-bold  px-6 sm:px-8 py-3 rounded-lg hover:bg-yellow-500 text-sm sm:text-base transition duration-300 ease-in-out"
               >
                 Submit →
               </button>
@@ -301,8 +400,8 @@ const IAMNextPage = () => {
           </div>
         </div>
 
-        <FooterSection />
       </div>
+      <FooterSection />
 
     </div>
   );

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -74,9 +76,11 @@ export default function IamPeople() {
     return (
         <section className="py-12 md:py-20 bg-white text-black">
             <div className="text-center mb-12 px-4">
-                <h2 className='text-2xl sm:text-4xl lg:text-6xl font-bold mt-6'>What People Say <span>About IAM</span></h2>
+                <h2 className='text-ph sm:text-th lg:text-th xl:text-large font-bold mt-6'>What People Say <span>About IAM</span></h2>
+            <p className="text-gray-700 text-pn mt-2 sm:text-tn md:text-normal text-center max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
             </div>
-
             <div className="relative overflow-visible w-full">
                 <Swiper
                     ref={swiperRef}
@@ -107,13 +111,13 @@ export default function IamPeople() {
                 >
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>
-                            <div className="bg-gray-50 text-black p-6 md:py-12 md:px-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl h-auto min-h-[400px] md:h-[500px] max-w-[450px] mx-auto">
+                            <div className="bg-gray-50 text-black p-6 md:py-12 md:px-8 rounded-xl shadow-lg h-auto min-h-[400px] md:h-[500px] max-w-[450px] mx-auto">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
                                     className="w-16 h-16 md:w-24 md:h-24 rounded-lg mb-6 md:mb-8"
                                 />
-                                <p className="text-base md:text-xl mb-6 md:mb-8">{testimonial.quote}</p>
+                                <p className="text-pn  sm:text-tn md:text-normal mb-6 md:mb-8">{testimonial.quote}</p>
                                 <div className="flex mb-4 md:mb-6">
                                     {[...Array(5)].map((_, i) => (
                                         <span key={i} className="text-yellow-400 text-xl md:text-3xl">
@@ -121,8 +125,8 @@ export default function IamPeople() {
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="font-bold text-xl md:text-3xl">{testimonial.name}</h3>
-                                <p className="text-gray-400 text-sm md:text-base">{testimonial.role}</p>
+                                <h3 className="font-bold text-cdh sm:text-pch md:text-cdh">{testimonial.name}</h3>
+                                <p className="text-gray-400 text-pn  sm:text-tn md:text-normal">{testimonial.role}</p>
                             </div>
                         </SwiperSlide>
                     ))}
@@ -142,18 +146,19 @@ export default function IamPeople() {
                 <div className="flex mt-4 md:mt-0 space-x-4">
                     <button
                         onClick={handlePrev}
-                        className="bg-white  border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-400 transition-colors"
-                    >
-                        <ChevronLeft className="text-gray-800 w-4 h-4 md:w-6 md:h-6" />
+                        className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                        >
+                        <ChevronLeft className="text-black w-4 h-4 sm:w-10 sm:h-10" />
                     </button>
                     <button
                         onClick={handleNext}
-                        className="bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-400 transition-colors"
-                    >
-                        <ChevronRight className="text-gray-800 w-4 h-4 md:w-6 md:h-6" />
+                        className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                        >
+                        <ChevronRight className="text-black w-4 h-4 sm:w-10 sm:h-10" />
                     </button>
                 </div>
             </div>
         </section>
     )
 }
+
