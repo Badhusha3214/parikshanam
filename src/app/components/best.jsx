@@ -10,7 +10,7 @@ const IndustryResources = () => {
       title: "Model Bank",
       description: "Lacinia ornare magna penatibus adipiscing laoreet tempus.",
       borderColor: "border-yellow-400",
-      bgColor: "bg-yellow-50"
+      bgColor: "bg-white"
     },
     {
       title: "Preferred Partners",
@@ -27,9 +27,9 @@ const IndustryResources = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto p-5 py-16">
       <div className="text-left mb-12">
-        <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2  text-pn sm:text-tn md:text-normal rounded-xl text-sm mb-4">
+        <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 text-pn sm:text-tn md:text-normal rounded-xl text-sm mb-4">
           Our Industry Resources
         </span>
         <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold">Choose From The Best</h2>
@@ -43,7 +43,7 @@ const IndustryResources = () => {
         {/* Image visible on mobile at the top */}
         <div className="block md:hidden mb-8 flex justify-center">
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={`mobile-image-${selectedResource}`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -57,7 +57,7 @@ const IndustryResources = () => {
                 height={400}
                 className="w-4/5 max-w-md h-auto rounded-xl mx-auto"
               />
-            </motion.div>
+            </div>
           </AnimatePresence>
         </div>
 
@@ -66,12 +66,12 @@ const IndustryResources = () => {
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-400 z-0 opacity-30" />
           
           {resources.map((resource, index) => (
-            <motion.div
+            <div
               key={index}
               className={`
                 relative z-10 border-l-4 p-6 cursor-pointer transition-all duration-300
                 ${selectedResource === index 
-                  ? `${resource.borderColor} ${resource.bgColor} shadow-lg` 
+                  ? `${resource.borderColor} ${resource.bgColor} ` 
                   : 'border-gray-200 hover:border-gray-400 bg-white'}
               `}
               onClick={() => setSelectedResource(index)}
@@ -80,7 +80,7 @@ const IndustryResources = () => {
             >
               {/* Active yellow line segment */}
               {selectedResource === index && (
-                <motion.div
+                <div
                   initial={{ scaleX: 0, originX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -92,7 +92,7 @@ const IndustryResources = () => {
                 {resource.title}
               </h3>
               <AnimatePresence mode="wait">
-                <motion.p 
+                <p 
                   key={`desc-${index}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -101,12 +101,12 @@ const IndustryResources = () => {
                   className="text-pn sm:text-tn lg:text-tn xl:text-normal text-gray-700 mb-4"
                 >
                   {resource.description}
-                </motion.p>
+                </p>
               </AnimatePresence>
-              <motion.button 
+              <button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center text-pn sm:text-tn lg:text-tn xl:text-normal border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition"
+                className="flex items-center text-pn sm:text-tn lg:text-tn xl:text-normal border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-100 transition"
               >
                 Learn More
                 <Image
@@ -114,17 +114,17 @@ const IndustryResources = () => {
                   alt="arrow"
                   width={20}
                   height={20}
-                  className="ml-2"
+                  className="ml-2 flex items-end justify-end"
                 />
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
           ))}
         </div>
         
         {/* Image visible on desktop on the right side */}
         <div className="hidden md:block">
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={`image-${selectedResource}`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -138,7 +138,7 @@ const IndustryResources = () => {
                 height={400}
                 className="w-4/5 h-auto rounded-xl"
               />
-            </motion.div>
+            </div>
           </AnimatePresence>
         </div>
       </div>

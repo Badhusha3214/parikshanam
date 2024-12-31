@@ -82,7 +82,7 @@ const IAMMemberPerks = () => {
     };
 
     return (
-        <main className="w-full px-2 sm:px-4 md:px-6 lg:px-10 py-4 md:py-8">
+        <main className="w-full px sm:px-4 md:px lg:px py-4 md:py-8">
             <div className="bg-[#121212] text-white p-4 sm:p-6 md:p-10 lg:py-20 lg:pl-20">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 md:mb-10">
                     <h1 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4 sm:mb-0 leading-tight">
@@ -165,13 +165,13 @@ const IAMMemberPerks = () => {
                     <div className="flex space-x-2 sm:space-x-4 lg:mr-20">
                         <button
                             onClick={handlePrev}
-                            className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                            className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-500 transition-colors"
                         >
                             <ChevronLeft className="text-white w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
                         </button>
                         <button
                             onClick={handleNext}
-                            className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                            className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-500 transition-colors"
                         >
                             <ChevronRight className="text-white w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
                         </button>

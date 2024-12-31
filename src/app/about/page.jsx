@@ -67,15 +67,15 @@ export default function About() {
             </section>
 
             {/* Purpose, Journey, and Core Values sections */}
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section className="py">
                 <WhyIAM className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
             </section>
 
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section className="py">
                 <IAMJourney className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
             </section>
 
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section className="py">
                 <CoreValues className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
             </section>
 
@@ -90,7 +90,9 @@ export default function About() {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         {[
                             { name: "James Patterson", role: "President", image: "/james.png" },
-                            // ... other team members
+                            { name: "James Patterson", role: "President", image: "/james.png" },
+                            { name: "James Patterson", role: "President", image: "/james.png" },
+                            { name: "James Patterson", role: "President", image: "/james.png" },
                         ].map((member, index) => (
                             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
                                 <div className="relative h-64 sm:h-72">
@@ -112,7 +114,7 @@ export default function About() {
             </section>
 
             {/* Insights Section */}
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section className="py">
                 <div className="min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-large sm:text-th font-bold text-center mb-6 lg:mb-8 text-fontColor-heading">IAM Insights</h2>
                     <p className="text-center text-fontColor-primary mb-16 lg:mb-20 max-w-3xl mx-auto text-normal sm:text-pch">
@@ -131,17 +133,17 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Ready to Join Section */}
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
-                <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            {/* Ready to Join Section */}   
+            <section className="">
+                <div className=" flex items-center justify-center px-4 sm:px-6 lg:px-8">
                     <div className="bg-gray-50 rounded-xl py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 text-center max-w-7xl w-full">
                         <h2 className="text-large sm:text-th xl:text-elarge font-bold mb-6 lg:mb-8 text-fontColor-heading">Ready to join?</h2>
                         <p className="text-fontColor-primary mb-8 lg:mb-12 max-w-3xl mx-auto text-normal sm:text-pch lg:text-xl">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                            <button className="bg-brand px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-md text-lg sm:text-xl font-medium text-fontColor-heading">Sign Up</button>
-                            <button className="bg-fontColor-heading text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-md text-lg sm:text-xl font-medium">View Plans</button>
+                            <button className="bg-brand px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-md text-lg sm:text-xl font-medium text-fontColor-heading hover:bg-fontColor-heading hover:text-brand">Sign Up</button>
+                            <button className="bg-fontColor-heading text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-md text-lg sm:text-xl font-medium hover:border-2 hover:border-fontColor-heading hover:bg-white hover:text-fontColor-heading ">View Plans</button>
                         </div>
                     </div>
                 </div>

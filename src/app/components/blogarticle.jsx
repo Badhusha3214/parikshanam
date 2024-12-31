@@ -64,7 +64,7 @@ const BlogArticle = () => {
                             vel pharetra vel. Enim sed faucibus turpis in eu mi bibendum.
                         </p>
                     </div>
-                    <Link href="/posts" className="bg-yellow-400 px-6 py-2 font-medium">
+                    <Link href="/posts" className="bg-yellow-400 hover:bg-black hover:text-yellow-400 px-6 py-2 font-medium">
                         View All Posts →
                     </Link>
                 </div>
@@ -108,12 +108,12 @@ const BlogArticle = () => {
 
                     <div className="flex justify-end mt-8 space-x-4">
                         <button
-                            className="swiper-button-prev-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-200 transition-colors"
+                            className="swiper-button-prev-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-400 transition-colors"
                         >
                             <ChevronLeft className="text-gray-800 w-4 h-4 md:w-6 md:h-6" />
                         </button>
                         <button
-                            className="swiper-button-next-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-200 transition-colors"
+                            className="swiper-button-next-custom bg-white border-2 md:border-4 border-black p-4 md:p-4 rounded-xl hover:bg-yellow-400 transition-colors"
                         >
                             <ChevronRight className="text-gray-800 w-4 h-4 md:w-6 md:h-6" />
                         </button>

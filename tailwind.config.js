@@ -28,12 +28,18 @@ module.exports = {
         'mobile-cdh': ['20px', { lineHeight: '1.4' }],
         'mobile-th': ['32px', { lineHeight: '1.3' }],
       },
-      screens:{
-        sm:'600px',
-        md: '728px',
-        lg: '984px',
-        xl: '1240px'
+      screens: {
+        sm: "640px", 
+        md: "768px",
+        lg: "924px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
+      padding: {
+        DEFAULT: "20px",   
+       
+      },
+
       colors: {
         brand: {
           DEFAULT: '#FFDD00',

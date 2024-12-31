@@ -32,7 +32,7 @@ const IAMJourney = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto md:mb-80 px-8 ">
+    <div className="max-w-7xl mx-auto md:mb-10 px-8 ">
       <h2 className="text-4xl font-bold mb-12 animate-fade-in">THE IAM Journey</h2>
       <div className="space-y-6">
         <p className="text-gray-600 mb-12 text-lg animate-slide-in-right">

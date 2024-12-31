@@ -32,7 +32,7 @@ const SubscriptionSection = () => {
           </button>
           <div className='text-pn sm:text-tn md:text-normal bg-gray-900 text-white rounded-lg -mx-8 -mb-8 p-4'>
             <p className="font-bold mx-4 mb-4">Features:</p>
-            <ul className="space-y-2 mx-4">
+            <ul className="space-y-2 mx-4 list-disc	list-inside	">
               <li>Model Directory</li>
               <li>Preferred Partners</li>
               <li>Aspiring Talents</li>
@@ -55,12 +55,12 @@ const SubscriptionSection = () => {
           <div className="mb-6">
             <span className="text-ph sm:text-th md:text-mid font-bold">₹25,000</span>
           </div>
-          <button className="w-full bg-yellow-400 text-pn sm:text-tn md:text-normal text-black font-bold py-3 rounded mb-8 hover:bg-yellow-500">
+          <button className="w-full bg-yellow-400 text-black font-bold py-3 text-pn sm:text-tn md:text-normal rounded mb-8 hover:bg-yellow-500">
             Get Started
           </button>
           <div className='text-pn sm:text-tn md:text-normal bg-gray-100 text-black rounded-lg -mx-8 -mb-8 p-4'>
             <p className="font-bold mx-4 mb-4">Features:</p>
-            <ul className="space-y-2 mx-4">
+            <ul className="space-y-2 mx-4 list-disc list-inside		">
               <li>Model Directory</li>
               <li>Preferred Partners</li>
               <li>Aspiring Talents</li>

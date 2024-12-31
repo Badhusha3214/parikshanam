@@ -146,13 +146,13 @@ export default function IamPeople() {
                 <div className="flex mt-4 md:mt-0 space-x-4">
                     <button
                         onClick={handlePrev}
-                        className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                        className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"
                         >
                         <ChevronLeft className="text-black w-4 h-4 sm:w-10 sm:h-10" />
                     </button>
                     <button
                         onClick={handleNext}
-                        className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-600 transition-colors"
+                        className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"
                         >
                         <ChevronRight className="text-black w-4 h-4 sm:w-10 sm:h-10" />
                     </button>
