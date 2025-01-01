@@ -1,3 +1,4 @@
+import { FooterSection } from '../../../components/footer';
 import Navbar from "../../../components/navbar"
 
 export default function Page() {
@@ -97,6 +98,7 @@ export default function Page() {
                     </div>
                 </div>
             </main>
+            <FooterSection />
         </div>
     )
 }

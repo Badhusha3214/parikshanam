@@ -148,7 +148,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex-shrink-0 relative z-[11000]">
             <div
-              whileHover={{ scale: 1.05 }}
+              whilehover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
@@ -189,7 +189,7 @@ export default function Navbar() {
               Technicians
             </NavLink>
             <NavLink
-              href="/partners"
+              href="/partner"
               className="text-white font-lg text-lg transition-colors hover:text-yellow-400"
               closeMenu={false}
             >

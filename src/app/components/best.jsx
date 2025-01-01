@@ -75,7 +75,7 @@ const IndustryResources = () => {
                   : 'border-gray-200 hover:border-gray-400 bg-white'}
               `}
               onClick={() => setSelectedResource(index)}
-              whileHover={{ scale: 1.02 }}
+              whilehover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               {/* Active yellow line segment */}
@@ -104,7 +104,7 @@ const IndustryResources = () => {
                 </p>
               </AnimatePresence>
               <button 
-                whileHover={{ scale: 1.05 }}
+                whilehover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center text-pn sm:text-tn lg:text-tn xl:text-normal border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-100 transition"
               >

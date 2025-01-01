@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/navbar';
 import Link from 'next/link';
+import { FooterSection } from '../components/footer';
 
 // Mock blog post data
 const blogPosts = [
@@ -287,6 +288,7 @@ export default function BlogPage() {
                     </button>
                 </div>
             </div>
+            <FooterSection />
         </main>
     );
 }

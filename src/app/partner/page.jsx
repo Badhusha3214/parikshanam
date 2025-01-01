@@ -1,6 +1,6 @@
 import { Search } from "../components/search"
 import { RentalGrid } from "../components/rental_grid"
-import { FooterSection } from '../components/footer'
+import { FooterSection } from "../components/footer"
 import Navbar from "../components/navbar"
 
 export default function PartnersPage() {

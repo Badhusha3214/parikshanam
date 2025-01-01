@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft } from 'lucide-react'
 import Navbar from "../../components/navbar"
+import { FooterSection } from '../../components/footer';
 
 export default function Page() {
   return (
@@ -164,6 +165,7 @@ export default function Page() {
           </section>
         </div>
       </main>
+      <FooterSection />
     </div>
   )
 }

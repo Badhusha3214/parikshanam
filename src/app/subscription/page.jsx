@@ -3,6 +3,7 @@
 import React from 'react'
 import Navbar from '../components/navbar'
 import Link from 'next/link'
+import { FooterSection } from '../components/footer';
 
 export default function SubscriptionPage() {
     const subscriptionOptions = [
@@ -88,6 +89,7 @@ export default function SubscriptionPage() {
                     ))}
                 </div>
             </div>
+            <FooterSection />
         </>
     )
 }
