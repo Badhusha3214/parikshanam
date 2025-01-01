@@ -148,10 +148,10 @@ export default function ContactPage() {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-brand text-fontColor-heading py-3 px-4  flex items-center justify-center gap-2 hover:bg-brand-secondary transition-colors text-tsh md:text-tn"
+                                className="w-full bg-yellow-400 text-fontColor-heading py-3 px-4  flex items-center justify-center gap-2 hover:bg-fontColor-heading hover:text-yellow-400 transition-colors text-tsh md:text-tn"
                             >
                                 Submit
-                                <ArrowRight className="w-4 h-4" />
+                                <ArrowRight className="w-4 h-4 " />
                             </button>
                         </form>
                     </div>

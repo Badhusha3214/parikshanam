@@ -64,11 +64,11 @@ export default function SignupPage() {
     return (
         <>
             <Navbar />
-            <div className="flex min-h-screen mt-14 flex-col lg:flex-row">
+            <div className="flex min-h-screen mt-16 flex-col lg:flex-row">
                 <div className="relative hidden lg:block lg:w-1/2 bg-[#FFF9F0]">
                     <div className="absolute inset-0 z-0 bg-[url('/signup.svg')] bg-cover bg-center opacity-100"></div>
                 </div>
-                <div className="flex w-full px-4 sm:px-6 lg:w-1/2 py-8 lg:py-0">
+                <div className="flex w-full px-4 sm:px-6 lg:w-1/2 py-10 lg:py-4">
                     <div className="w-full max-w-md mx-auto space-y-6">
                         <div className="space-y-2 text-center">
                             <h1 className="text-mobile-large sm:text-large font-bold">

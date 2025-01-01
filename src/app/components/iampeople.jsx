@@ -81,7 +81,7 @@ export default function IamPeople() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             </div>
-            <div className="relative overflow-visible w-full">
+            <div className="relative overflow-visible w-full ">
                 <Swiper
                     ref={swiperRef}
                     spaceBetween={10}
@@ -111,7 +111,7 @@ export default function IamPeople() {
                 >
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>
-                            <div className="bg-gray-50 text-black p-6 md:py-12 md:px-8 rounded-xl shadow-lg h-auto min-h-[400px] md:h-[500px] max-w-[450px] mx-auto">
+                            <div className="bg-gray-50 text-black p-6 md:py-12 md:px-8 rounded-xl shadow-lg h-auto min-h-[400px] md:h-[500px] max-w-[450px] mx-auto my-[20px]">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
@@ -120,7 +120,7 @@ export default function IamPeople() {
                                 <p className="text-pn  sm:text-tn md:text-normal mb-6 md:mb-8">{testimonial.quote}</p>
                                 <div className="flex mb-4 md:mb-6">
                                     {[...Array(5)].map((_, i) => (
-                                        <span key={i} className="text-yellow-400 text-xl md:text-3xl">
+                                        <span key={i} className="text-yellow-400 text-3xl md:text-3xl">
                                             {i < testimonial.rating ? '⭐' : '☆'}
                                         </span>
                                     ))}
@@ -143,16 +143,16 @@ export default function IamPeople() {
                     ))}
                 </div>
 
-                <div className="flex mt-4 md:mt-0 space-x-4">
+                <div className="flex mt-4 md:mt-0 space-x-2">
                     <button
                         onClick={handlePrev}
-                        className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"
+                        className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-4 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"
                         >
                         <ChevronLeft className="text-black w-4 h-4 sm:w-10 sm:h-10" />
                     </button>
                     <button
                         onClick={handleNext}
-                        className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-2 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"
+                        className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-4 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"
                         >
                         <ChevronRight className="text-black w-4 h-4 sm:w-10 sm:h-10" />
                     </button>
