@@ -43,7 +43,7 @@ export default function About() {
             </section>
 
             {/* History Section */}
-            <section className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                     <div className="flex items-center h-[300px] sm:h-[400px] lg:h-[600px]">
                         <Image
