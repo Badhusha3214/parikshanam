@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Menu, ChevronDown } from "lucide-react";
+import { X, Menu, ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
   const [modelsOpen, setModelsOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 1208);
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -146,7 +146,7 @@ export default function Navbar() {
       <div className="container mx-auto
        lg:px-0">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex-shrink-0 relative z-[11000]">
+        <Link href="/" className={`flex-shrink-0 relative z-[11000] ${mobileMenuOpen ? 'hidden' : 'block'}`}>
             <div
               whilehover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -165,7 +165,7 @@ export default function Navbar() {
           <div
             className={`${
               isMobile ? "hidden" : "flex"
-            } items-center space-x-4 lg:space-x-8`}
+            } items-center space-x-4 xl:space-x-8`}
           >
             <NavLink
               href="/about"
@@ -326,16 +326,7 @@ export default function Navbar() {
               onClick={toggleMobileMenu}
             />
 
-            <button
-              onClick={toggleMobileMenu}
-              className="top-4 right-4 text-white hover:text-yellow-400 absolute transition-colors z-[20000]"
-              whileTap={{ scale: 0.9 }}
-              aria-label="Close menu"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              <X className="w-8 h-8" />
-            </button>
+            {/* Removed separate close button */}
 
             <div
               ref={mobileMenuRef}
@@ -343,16 +334,30 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween" }}
-              className="fixed inset-0 bg-black text-white p w-screen overflow-y-auto z-[10000]"
+              className="fixed inset-0 bg-black text-white w-screen overflow-y-auto z-[10000]"
               onClick={(e) => e.stopPropagation()}
             >
-              <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="space-y-4 max-w-full p mt-12"
-              >
-                {/* Mobile Menu Content */}
+              <div className="flex items-center justify-between px-4 h-16 border-b border-gray-800">
+                <Link href="/" className="flex-shrink-0">
+                  <Image
+                    src="/logo.svg"
+                    alt="Logo"
+                    width={120}
+                    height={40}
+                    priority
+                    className="h-8 w-auto object-contain"
+                  />
+                </Link>
+                <button
+                  onClick={toggleMobileMenu}
+                  className="text-white hover:text-yellow-400 transition-colors"
+                  whileTap={{ scale: 0.9 }}
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="p-4">
                 <div className="space-y-4">
                   <NavLink href="/about">About</NavLink>
                   <NavLink href="/members">Members</NavLink>
