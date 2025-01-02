@@ -19,13 +19,13 @@ export function ModelList({
           Filter <ListFilter />
         </div>
       </div>
-      <h1 className="py-3 px-3 mt-4 mb-8 bg-brand-subtle text-fontColor-tertiary text-sm flex items-center gap-2">
+      <h2 className="py-3 px-3 mt-4 mb-8 bg-brand-subtle text-fontColor-tertiary text-sm flex items-center gap-2">
         {" "}
         <span className="">
           <ArrowRight size={20} strokeWidth={1} />
         </span>
         Showing 12 results out of {models.length}00 profiles
-      </h1>
+      </h2>
       <ul className={listClassName}>
         {models.map((model, i) => (
           <li key={i}>

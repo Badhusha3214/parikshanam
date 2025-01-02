@@ -14,13 +14,13 @@ export default function BlogPost() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="mx-auto px-4 py-12 sm:py-20 mt-8">
+      <main className="mx-auto px py sm:py-[20px] lg:py-[30px] xl:py-[50px] xl:pt-[100px] mt-8">
         {/* Article Header */}
         <div className="text-center mb-8">
           <p className="text-black mb-4">Published Jan 23, 2023</p>
-          <h1 className="text-mobile-large sm:text-large md:text-elarge font-bold mb-6">
+          <h2 className="text-mobile-large sm:text-large md:text-elarge font-bold mb-6">
             Ai in Advertisement and Film Making
-          </h1>
+          </h2>
           <p className="mb-6 w-full sm:w-5/6 text-base sm:text-lg mx-auto text-black">
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
@@ -114,7 +114,7 @@ export default function BlogPost() {
             <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-[#1a1d1f] text-white rounded-lg">
               <span>Share Link</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 8.8C11.4667 8.8 11 9.26667 11 9.8V13C11 13.2667 10.7333 13.5333 10.4667 13.5333H3C2.73333 13.5333 2.46667 13.2667 2.46667 13V5.53333C2.46667 5.26667 2.73333 5 3 5H6.2C6.73333 5 7.2 4.53333 7.2 4C7.2 3.46667 6.73333 3 6.2 3H3C1.6 3 0.466667 4.13333 0.466667 5.53333V13C0.466667 14.4 1.6 15.5333 3 15.5333H10.4667C11.8667 15.5333 13 14.4 13 13V9.8C13 9.26667 12.5333 8.8 12 8.8Z" fill="white" />
+                <path d="M12 8.8C11.4667 8.8 11 9.26667 11 9.8V13C11 13.2667 10.7333 13.5333 10.4667 13.5333H3C2.73333 13.5333 2.46667 13.2667 2.46667 13V5.53333C2.46667 5.26667 2.73333 5 3 5H6.2C6.73333 5 7.2 4.53333 7.2 4C7.2 3.46667 6.73333 3 6.2 3H3C1.6 3 0.466667 4.13333 0.466667 5.53333V13C0.466667 14.4 1.6 15.5333 3 15.5333h20.4667C11.8667 15.5333 13 14.4 13 13V9.8C13 9.26667 12.5333 8.8 12 8.8Z" fill="white" />
                 <path d="M15.8667 0.466667C15.6 0.2 15.2 0.0666667 14.8 0.133333L8.86667 1.06667C8.26667 1.13333 7.86667 1.73333 7.93333 2.33333C8 2.93333 8.6 3.33333 9.2 3.26667L12.2667 2.8L6.93333 8.13333C6.53333 8.53333 6.53333 9.13333 6.93333 9.53333C7.13333 9.73333 7.4 9.8 7.66667 9.8C7.93333 9.8 8.2 9.73333 8.4 9.53333L13.7333 4.2L13.2667 7.26667C13.2 7.86667 13.6 8.46667 14.2 8.53333C14.2667 8.53333 14.2667 8.53333 14.3333 8.53333C14.8667 8.53333 15.3333 8.13333 15.4 7.6L16.3333 1.66667C16.4 1.26667 16.2 0.8 15.8667 0.466667Z" fill="white" />
               </svg>
             </button>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const FooterSection = () => {
     return (
-        <footer className="bg-black text-white py-8 sm:py-12 lg:py-16">
+        <footer className="bg-black text-white py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                     {/* Logo and Description Column */}
@@ -46,7 +46,6 @@ const FooterSection = () => {
                     <p className="text-gray-400 text-pn sm:text-tn lg:text-tn xl:text-normal mb-4 sm:mb-0">&copy; 2025 Indian Ad Film Makers. All rights reserved.</p>
                     <div className="flex justify-center sm:justify-start space-x-4 sm:space-x-6">
                         {[
-                            { name: "LinkedIn", src: "/footer/Linkedin.png" },
                             { name: "Facebook", src: "/footer/Facebook.png" },
                             { name: "Instagram", src: "/footer/Instagram.png" },
                             { name: "LinkedIn", src: "/footer/LinkedIn.png" },

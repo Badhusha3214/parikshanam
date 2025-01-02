@@ -37,7 +37,7 @@ export default function CreatePasswordPage() {
                 <div className="flex mx-auto max-w-[650px] items-center justify-center px-6 lg:w-1/2">
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <h1 className="text-5xl font-bold text-left">Create Password</h1>
+                            <h2 className="text-5xl font-bold text-left">Create Password</h2>
                             <p className="text-gray-600 text-left">
                                 Your password must be at least 8 characters long, include uppercase and lowercase letters, numbers, and special
                                 symbols.

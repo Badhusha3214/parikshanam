@@ -45,7 +45,7 @@ const IAMNextPage = () => {
       </div>
 
       {/* Who IAM? Section - Responsive Layout */}
-      <main className="container mx-auto px py-8 sm:py-12 lg:py-16 xl:py-32">
+      <main className="container mx-auto py sm:py-[20px] lg:py-[30px] xl:py-[50px] xl:pt-[100px]">
         <section className="grid grid-cols-1 lg:grid-cols-2 sm:gap-1 gap-6 lg:gap-12 items-center">
           <div className="lg:order-1 flex justify-center lg:justify-start">
             <Image
@@ -83,7 +83,7 @@ const IAMNextPage = () => {
       <WhyIAM />
 
       {/* Our Initiatives Section - Responsive Cards */}
-      <div className="container mx-auto px py-16 md:py-32">
+      <div className="container mx-auto py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
       <div className="text-center mb-16">
         <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 rounded-xl text-pn sm:text-tn md:text-normal sm mb-4">
           Our Services
@@ -151,7 +151,7 @@ const IAMNextPage = () => {
 
       <IndustryResources/>
 
-      <main className="container mx-auto px py-8 sm:py-12 md:py-16 lg:py-20">
+      <main className="container mx-auto  py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-32 items-center">
           {/* Image Column - Responsive Order */}
           <div className="order-2 md:order-1 flex justify-center">
@@ -199,8 +199,10 @@ const IAMNextPage = () => {
       {/* Remaining Sections */}
       <IAMMemberPerks />
       <SubscriptionSection />
+      <section className='px'>
       <IamPeople />
-      <div className="container mx-auto px py-8 sm:py-16">
+      </section>
+      <div className="container mx-auto px py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Section - Black Box */}
           <div className="bg-black text-white rounded-2xl p-6 sm:p-8 lg:p-12">
@@ -264,7 +266,7 @@ const IAMNextPage = () => {
           </div>
 
           {/* Right Section - Contact Form */}
-          <div className="w-full">
+          <div className="w-full ">
             <form className="mb-2 space-y-4">
               <div>
                 <label className="block text-pch sm:text-pch md:text-cdh mt-2 font-medium mb-2">

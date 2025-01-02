@@ -10,7 +10,7 @@ export function MemberList({
 }) {
   return (
     <div className="px-section py-section">
-      <h1 className="px-2 py-2">Showing 12 results out of {members.length}00 profiles</h1>
+      <h2 className="px-2 py-2">Showing 12 results out of {members.length}00 profiles</h2>
       <ul className={listClassName}>
         {members.map((member) => (
           <MemberCard 

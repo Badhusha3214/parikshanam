@@ -14,9 +14,9 @@ export function ModelList({
     <div className="mt-10 md:mt-20">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="custom-h2 text-fontColor-secondary !mb-0">
+          <h2 className="custom-h2 text-fontColor-secondary !mb-0">
             Model Bank
-          </h1>
+          </h2>
           <p className="text-fontColor-sub-heading mt-1">
             Showing 48 results out of 129,627 based to the filter criteria.
           </p>

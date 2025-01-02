@@ -19,13 +19,13 @@ export default function PartnersPage() {
             }}
           />
           <div className="absolute inset-0 flex items-center justify-center px-4">
-            <h1 className="text-mobile-mid lg:text-mid font-bold text-white text-center max-w-[90%]">
+            <h2 className="text-mobile-mid lg:text-mid font-bold text-white text-center max-w-[90%]">
               Preferred{" "}
               <span className="relative inline-block">
                 Partners
                 <span className="absolute -bottom-2 left-0 h-1 w-full bg-brand" />
               </span>
-            </h1>
+            </h2>
           </div>
         </section>
 

@@ -19,7 +19,7 @@ const CoreValues = () => {
             strokeLinejoin="round"
           />
           <path
-            d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21"
+            d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3h20C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21"
             stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
@@ -41,14 +41,14 @@ const CoreValues = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M4 14H10V20M4 14V20H10M4 14L10 20"
+            d="M4 14h20V20M4 14V20h20M4 14L10 20"
             stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M20 10H14V4M20 10V4H14M20 10L14 4"
+            d="M20 10h24V4M20 10V4h24M20 10L14 4"
             stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
@@ -84,7 +84,7 @@ const CoreValues = () => {
             strokeLinejoin="round"
           />
           <path
-            d="M12 8H12.01"
+            d="M12 8h22.01"
             stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
@@ -128,11 +128,11 @@ const CoreValues = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-24">
+    <div className="bg-black text-white py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
       <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left side: Heading and Description */}
         <div>
-          <h1 className="text-6xl font-bold mb-6">Our Core Values</h1>
+          <h2 className="text-6xl font-bold mb-6">Our Core Values</h2>
           <p className="text-xl mb-8">
             Lacinia ornare magna
             <br />

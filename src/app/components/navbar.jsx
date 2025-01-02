@@ -292,7 +292,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/login"
-              className="bg-yellow-400 text-black font-lg text-lg px-6 py-2 rounded-md hover:bg-black hover:text-yellow-400"
+              className="bg-yellow-400 text-black font-lg text-lg px-6 py-2 rounded-md hover:bg-black hover:text-yellow-400 border-2 border-yellow-400 hover:border-yellow-400 "
             >
               Join
             </Link>

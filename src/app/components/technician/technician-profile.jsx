@@ -61,9 +61,9 @@ export default function TechnicianProfileCard({ technician }) {
           </div>
           <div className="flex-grow">
             <div className="space-y-2">
-              <h1 className="custom-h1 text-fontColor-heading font-bold pt-5 md:pt-5">
+              <h2 className="custom-h2 text-fontColor-heading font-bold pt-5 md:pt-5">
                 {technician.name}
-              </h1>
+              </h2>
               <div className="flex gap-10">
                 <div className="flex">
                   <UserIcon className=" text-brand size-6 me-2 -ms-1 font-normal my-auto" />

@@ -55,9 +55,9 @@ export default function SubscriptionPage() {
         <>
             <Navbar />
             <div className="container mx-auto px-4 py-12 mt-20">
-                <h1 className="text-5xl font-bold text-center mb-16">
+                <h2 className="text-5xl font-bold text-center mb-16">
                     Discover Your Role In IAM
-                </h1>
+                </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {subscriptionOptions.map((option) => (

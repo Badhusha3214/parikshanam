@@ -16,13 +16,13 @@ const Browse_Header = ({ bg, heading }) => {
         priority
       />
       <div className=" absolute top-1/2 transform  -translate-y-1/2 space-y-10 left-0 right-0   ">
-        <h1 className="custom-h1 text-center text-white">
+        <h2 className="custom-h2 text-center text-white">
           {"Find your"}
           <span className="relative">
             {"  " + "Dream Model"}
             <Underline className="absolute left-2 w-full  text-brand h-3" />
           </span>
-        </h1>
+        </h2>
         <div className="px-section">
             <SearchBar/>
         </div>

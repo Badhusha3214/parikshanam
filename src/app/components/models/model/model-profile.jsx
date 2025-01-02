@@ -66,9 +66,9 @@ function Content({ profile }) {
           <div className="flex w-full">
             <div className="flex flex-col gap-2  pb-5 mt-5 md:mt-10 ">
               <div className="flex items-center gap-3">
-                <h1 className="custom-h1 text-fontColor-sub-heading font-semibold text-nowrap">
+                <h2 className="custom-h2 text-fontColor-sub-heading font-semibold text-nowrap">
                   {profile.name}
-                </h1>
+                </h2>
                 <div className="px-4 py-1 border ">22</div>
               </div>
                 <div>

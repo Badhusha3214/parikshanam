@@ -34,24 +34,24 @@ export default function ContactPage() {
 
             {/* Main Content */}
             <main className="flex-grow container mx-auto px-4 py-20 md:py-20 mt-6">
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    {/* Left Column */}
-                    <div className="space-y-6 md:space-y-8">
-                        <div className="rounded-lg overflow-hidden">
-                            <Image
-                                src="/contactus.png"
-                                alt="Business handshake"
-                                width={600}
-                                height={400}
-                                className="w-full object-cover"
-                            />
-                        </div>
-                        <div className="space-y-4">
-                            <div className="flex items-start gap-3">
-                                <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-                                <p className="text-tsh md:text-tn text-fontColor-primary">
-                                    On Stage, Near Mc Donalds, Palarivatttom,
-                                    <br />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                {/* Left Column */}
+                <div className="space-y-6 md:space-y-8 order-2 md:order-1">
+                    <div className="rounded-lg overflow-hidden">
+                        <Image
+                            src="/contactus.png"
+                            alt="Business handshake"
+                            width={600}
+                            height={400}
+                            className="w-full object-cover"
+                        />
+                    </div>
+                    <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                            <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+                            <p className="text-tsh md:text-tn text-fontColor-primary">
+                                On Stage, Near Mc Donalds, Palarivatttom,
+                                            <br />
                                     Chakkaraparambu, Ernakulam, Kerala 683032, India
                                 </p>
                             </div>
@@ -74,8 +74,8 @@ export default function ContactPage() {
                     </div>
 
                     {/* Right Column */}
-                    <div>
-                        <h1 className="text-mobile-mid md:text-mid text-fontColor-heading font-bold mb-2">Connect With Us</h1>
+                    <div className="space-y-6 md:space-y-8 order-1 md:order-2">
+                        <h2 className="text-mobile-mid md:text-mid text-fontColor-heading font-bold mb-2">Connect With Us</h2>
                         <p className="text-tsh md:text-tn text-fontColor-muted mb-6">Fill out the form to get in touch with IAM</p>
 
                         <form onSubmit={handleSubmit} className="space-y-4">

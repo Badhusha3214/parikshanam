@@ -10,7 +10,7 @@ export default function Page() {
             {/* Main Content */}
             <main className="max-w-7xl mx-auto px-4 py-20">
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold mb-4">Join as a Model</h1>
+                    <h2 className="text-5xl font-bold mb-4">Join as a Model</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>

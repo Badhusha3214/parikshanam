@@ -12,13 +12,13 @@ export default function About() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="min-h-screen mt-16 flex flex-col lg:flex-row relative px-4 sm:px-6 lg:px-0 pt-4 sm:pt-4 lg:px-0 mb-[40px] sm:mb-[50px] lg:mb-[100px]">
+            <section className="min-h-screen mt-16 flex flex-col lg:flex-row relative px-4 sm:px-6 lg:px-0 pt-4 sm:pt-4 lg:px-0 pb sm:pb-[20px] lg:pb-[30px] xl:pb-[50px]">
                 {/* Left Column */}
                 <div className="flex flex-col justify-center w-full lg:w-1/2 max-w-7xl mx-auto  lg:pl-8 xl:pl-20 py-0 lg:py-0">
 
-                    <h1 className="text-large sm:text-th xl:text-elarge font-bold max-w-3xl leading-none">
+                    <h2 className="text-large sm:text-th xl:text-elarge font-bold max-w-3xl leading-none">
                         <span className="text-gray-700">Pioneering Progress </span><span className="text-fontColor-heading">With every step.</span>
-                    </h1>
+                    </h2>
                     <p className="text-normal text-fontColor-primary mt-8 mb-8 max-w-2xl">
                         Lacinia ornare magna penatibus adipiscing laoreet tempus.
                         Lacinia ornare magna penatibus adipiscing laoreet tempus.
@@ -34,7 +34,7 @@ export default function About() {
                 </div>
                 <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto relative mt-8 lg:mt-0">
                     <Image
-                        src="/replace.png"
+                        src="/Replace.svg"
                         alt="About Hero"
                         fill
                         className="object-cover"
@@ -43,7 +43,7 @@ export default function About() {
             </section>
 
             {/* History Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                     <div className="flex items-center h-[300px] sm:h-[400px] lg:h-[600px]">
                         <Image
@@ -67,20 +67,20 @@ export default function About() {
             </section>
 
             {/* Purpose, Journey, and Core Values sections */}
-            <section className="py">
+            <section >
                 <WhyIAM className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
             </section>
 
-            <section className="py">
+            <section>
                 <IAMJourney className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
             </section>
 
-            <section className="py">
+            <section className="py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
                 <CoreValues className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
             </section>
 
             {/* Team Section */}
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section className="py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-large sm:text-th text-center font-bold mb-6 text-fontColor-heading">Our Core team</h2>
                     <p className="text-center text-fontColor-primary text-normal sm:text-pch mb-12">
@@ -114,14 +114,14 @@ export default function About() {
             </section>
 
             {/* Insights Section */}
-            <section className="py">
+            <section className="py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
                 <div className="min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-large sm:text-th font-bold text-center mb-6 lg:mb-8 text-fontColor-heading">IAM Insights</h2>
                     <p className="text-center text-fontColor-primary mb-16 lg:mb-20 max-w-3xl mx-auto text-normal sm:text-pch">
                         Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class.
                     </p>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16 lg:mb-20">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 ">
                         <StatBlock number="20%" title="Increased Recognitions" />
                         <StatBlock number="15%" title="More Networking" />
                         <StatBlock number="89%" title="Average ROI Return" />
@@ -136,7 +136,7 @@ export default function About() {
             {/* Ready to Join Section */}   
             <section className="">
                 <div className=" flex items-center justify-center px-4 sm:px-6 lg:px-8">
-                    <div className="bg-gray-50 rounded-xl py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 text-center max-w-7xl w-full">
+                    <div className="bg-gray-50 rounded-xl py sm:py-[20px] lg:py-[30px] xl:py-[50px] px-6 sm:px-8 lg:px-12 text-center max-w-7xl w-full">
                         <h2 className="text-large sm:text-th xl:text-elarge font-bold mb-6 lg:mb-8 text-fontColor-heading">Ready to join?</h2>
                         <p className="text-fontColor-primary mb-8 lg:mb-12 max-w-3xl mx-auto text-normal sm:text-pch lg:text-xl">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -150,7 +150,7 @@ export default function About() {
             </section>
 
             {/* Blog Articles Section */}
-            <section className="py-[20px] sm:py-[25px] lg:py-[50px]">
+            <section>
                 <BlogArticle />
             </section>
 

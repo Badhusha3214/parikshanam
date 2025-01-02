@@ -60,7 +60,7 @@ export default function LoginPage() {
                 <div className="flex w-full items-center justify-center px-6 lg:w-1/2">
                     <div className="w-full max-w-md space-y-8">
                         <div className="space-y-2">
-                            <h1 className="text-large font-bold">Welcome Back</h1>
+                            <h2 className="text-large font-bold">Welcome Back</h2>
                         </div>
 
                         <form className="space-y-6">

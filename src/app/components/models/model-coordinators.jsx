@@ -25,7 +25,7 @@ const coordinatorsOnView = coordinators.slice(currentPage * itemsPerPage, (curre
      <div className="w-full">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="custom-h2 text-fontColor-secondary !mb-0">Model Coordinators</h1>
+          <h2 className="custom-h2 text-fontColor-secondary !mb-0">Model Coordinators</h2>
           <p className="text-fontColor-sub-heading mt-1">Choose from our experienced model coordinators.</p>
         </div>
         <div className="flex gap-4">

@@ -53,21 +53,21 @@ const BlogArticle = () => {
     ]
 
     return (
-        <section className="py-16">
+        <section className="py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
             <div className="container mx-auto px-4">
-                <div className="flex justify-between items-center mb-8">
-                    <div>
-                        <span className="text-sm text-black bg-yellow-100 p-1 rounded-lg font-medium">blog</span>
-                        <h2 className="text-4xl font-bold mt-2">Latest Articles</h2>
-                        <p className="text-gray-600 mt-2">
-                            Donec ac odio tempor orci dapibus ultrices. Ut lectus arcu bibendum at varius
-                            vel pharetra vel. Enim sed faucibus turpis in eu mi bibendum.
-                        </p>
-                    </div>
-                    <Link href="/posts" className="bg-yellow-400 hover:bg-black hover:text-yellow-400 px-6 py-2 font-medium">
-                        View All Posts →
-                    </Link>
-                </div>
+            <div className="flex flex-col xl:flex-row justify-between items-center mb-8">
+    <div>
+        <span className="text-sm text-black bg-yellow-100 p-1 rounded-lg font-medium">blog</span>
+        <h2 className="text-4xl font-bold mt-2">Latest Articles</h2>
+        <p className="text-gray-600 mt-2">
+            Donec ac odio tempor orci dapibus ultrices. Ut lectus arcu bibendum at varius
+            vel pharetra vel. Enim sed faucibus turpis in eu mi bibendum.
+        </p>
+    </div>
+    <Link href="/posts" className="bg-yellow-400 hover:bg-black hover:text-yellow-400 px-6 mt-2 py-2 font-medium self-start xl:self-auto">
+        View All Posts →
+    </Link>
+</div>
 
                 <div className="relative">
                     <Swiper

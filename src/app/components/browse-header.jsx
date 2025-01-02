@@ -17,13 +17,13 @@ const Browse_Header = ({ bg, heading }) => {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/70" />
       <div className="relative h-full flex items-center justify-center">
-        <h1 className="custom-h1 text-white">
+        <h2 className="custom-h2 text-white">
           {remainingWords} 
           <span className="relative">
             {'  ' + lastWord}
             <Underline className="absolute left-2 w-full  text-brand h-3" />
           </span>
-        </h1>
+        </h2>
       </div>
 
     </div>

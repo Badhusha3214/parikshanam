@@ -61,9 +61,9 @@ export default function ProfileCard({ member }) {
           </div>
           <div className="flex-grow">
             <div className="space-y-1 ">
-              <h1 className="custom-h1 text-fontColor-heading font-bold pt-5 md:pt-5">
+              <h2 className="custom-h2 text-fontColor-heading font-bold pt-5 md:pt-5">
                 {member.name}
-              </h1>
+              </h2>
               <p className="custom-h3 font-normal text-fontColor-tertiary">{member.company}</p>
               <div className="flex">
                 <LocationIcon className=" text-brand size-6 me-2 -ms-1 font-normal my-auto" />

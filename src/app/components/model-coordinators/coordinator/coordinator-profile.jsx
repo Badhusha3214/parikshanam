@@ -75,9 +75,9 @@ function Content({ profile }) {
           </div>
           <div className="flex flex-wrap  w-full">
             <div className="flex flex-col gap-2 lg:w-3/5 pb-5 ">
-              <h1 className="custom-h1 text-fontColor-secondary font-semibold pt-5 md:pt-5 text-nowrap">
+              <h2 className="custom-h2 text-fontColor-secondary font-semibold pt-5 md:pt-5 text-nowrap">
                 {profile.name}
-              </h1>
+              </h2>
               <h4 className="custom-h4 font-medium text-fontColor-muted">
                 {profile.role}
               </h4>

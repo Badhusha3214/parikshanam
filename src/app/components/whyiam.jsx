@@ -5,14 +5,14 @@ import Image from 'next/image';
 
 const WhyIAM = () => {
     return (
-        <main className="px py-8 sm:py-12 md:py-16 lg:py-24 xl:py-32">
+        <main className="px py-8 py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
             <div className="text-center mb-10 sm:mb-5 md:mb-16 lg:mb-20">
                 <span className='text-psh sm:text-tsh md:text-normal lg:text-normal xl:text-normal border-2 border-gray-400 px-4 py-2 sm:px-6 sm:py-3 rounded-xl inline-block'>
                     Why IAM?
                 </span>
-                <h1 className='text-ph sm:text-th md:text-th lg:text-large xl:text-large font-bold mt-6 sm:mt-2 md:mt-8'>
+                <h2 className='text-ph sm:text-th md:text-th lg:text-large xl:text-large font-bold mt-6 sm:mt-2 md:mt-8'>
                     Our <span className="text-primary">Purpose</span>
-                </h1>
+                </h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 w-full">

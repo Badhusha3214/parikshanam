@@ -139,7 +139,7 @@ export default function BlogPage() {
                 {/* Header Section */}
                 <div className="space-y-2 mb-6 sm:mb-8 lg:mb-12">
                     <span className="text-xs sm:text-sm text-gray-500">Blog Post</span>
-                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Blog Insights & Industry News</h1>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Blog Insights & Industry News</h2>
                     <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
                         Explore curated articles, tips, and resources shared by industry leaders and experts.
                     </p>

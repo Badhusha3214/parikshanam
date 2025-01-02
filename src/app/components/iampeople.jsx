@@ -74,7 +74,7 @@ export default function IamPeople() {
     };
 
     return (
-        <section className="py-12 md:py-20 bg-white text-black">
+        <section className="bg-white text-black py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
             <div className="text-center mb-12 px-4">
                 <h2 className='text-ph sm:text-th lg:text-th xl:text-large font-bold mt-6'>What People Say <span>About IAM</span></h2>
             <p className="text-gray-700 text-pn mt-2 sm:text-tn md:text-normal text-center max-w-2xl mx-auto">
@@ -111,24 +111,32 @@ export default function IamPeople() {
                 >
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>
-                            <div className="bg-gray-50 text-black p-6 md:py-12 md:px-8 rounded-xl shadow-lg h-auto min-h-[400px] md:h-[500px] max-w-[450px] mx-auto my-[20px]">
+                        <div className="bg-gray-50 text-black p-6 md:py-8 md:px-8 rounded-xl shadow-lg h-full min-h-[400px] md:min-h-[500px] max-w-[450px] mx-auto my-[20px] flex flex-col">
+                            <div className="flex-shrink-0">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
-                                    className="w-16 h-16 md:w-24 md:h-24 rounded-lg mb-6 md:mb-8"
+                                    className="w-16 h-16 md:w-24 md:h-24 rounded-lg"
                                 />
-                                <p className="text-pn  sm:text-tn md:text-normal mb-6 md:mb-8">{testimonial.quote}</p>
-                                <div className="flex mb-4 md:mb-6">
-                                    {[...Array(5)].map((_, i) => (
-                                        <span key={i} className="text-yellow-400 text-3xl md:text-3xl">
-                                            {i < testimonial.rating ? '⭐' : '☆'}
-                                        </span>
-                                    ))}
-                                </div>
-                                <h3 className="font-bold text-cdh sm:text-pch md:text-cdh">{testimonial.name}</h3>
-                                <p className="text-gray-400 text-pn  sm:text-tn md:text-normal">{testimonial.role}</p>
                             </div>
-                        </SwiperSlide>
+                            <div className="flex-grow flex flex-col justify-between mt-6 md:mt-8">
+                                <div>
+                                    <p className="text-pn sm:text-tn md:text-normal line-clamp-6">{testimonial.quote}</p>
+                                    <div className="flex mt-4 mb-4">
+                                        {[...Array(5)].map((_, i) => (
+                                            <span key={i} className="text-yellow-400 text-2xl md:text-3xl">
+                                                {i < testimonial.rating ? '⭐' : '☆'}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="mt-auto">
+                                    <h3 className="font-bold text-cdh sm:text-pch md:text-cdh truncate">{testimonial.name}</h3>
+                                    <p className="text-gray-400 text-pn sm:text-tn md:text-normal truncate">{testimonial.role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
@@ -143,7 +151,7 @@ export default function IamPeople() {
                     ))}
                 </div>
 
-                <div className="flex mt-4 md:mt-0 space-x-2">
+                <div className="flex mt-4 md:mt-0 space-x-2 px">
                     <button
                         onClick={handlePrev}
                         className="bg-gray-700 border-[1px] md:border-2 border-black bg-opacity-0 p-4 sm:p-3 rounded-xl hover:bg-yellow-400 transition-colors"

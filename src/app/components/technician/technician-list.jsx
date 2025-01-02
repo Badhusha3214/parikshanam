@@ -14,9 +14,9 @@ export function TechnicianList({
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <div>
-        <h1 className="px-3 py-3">
+        <h2 className="px-3 py-3">
           Showing 12 results of {technicians.length} profiles
-        </h1>
+        </h2>
         <ul className={listClassName}>
           {technicians.map((technician) => (
             <TechnicianCard key={technician.id} technician={technician} />

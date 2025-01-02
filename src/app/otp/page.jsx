@@ -45,7 +45,7 @@ export default function VerifyPage() {
                 <div className="flex w-full items-center justify-center px-6 lg:w-1/2">
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <h1 className="text-large font-bold text-center">Verify OTP</h1>
+                            <h2 className="text-large font-bold text-center">Verify OTP</h2>
                             <p className="text-gray-600 text-center">
                                 An OTP has been sent to your provided Phone Number. Verify the OTP to proceed further.
                             </p>
