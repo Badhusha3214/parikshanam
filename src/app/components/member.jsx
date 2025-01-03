@@ -82,8 +82,8 @@ const IAMMemberPerks = () => {
     };
 
     return (
-        <main className="w-full px sm:px-4 md:px lg:px py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
-            <div className="bg-[#121212] text-white p-4 sm:p-6 md:p-10 lg:py-20 lg:pl-20">
+        <main className="w-full  mt-[20px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px] bg-[#121212]">
+            <div className="mx-auto container text-white p-4 sm:p-6 md:p-10 lg:py-[60px] lg:px-20">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 md:mb-10">
                     <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4 sm:mb-0 leading-tight">
                         IAM Member <br className="hidden sm:block" /> Perks & Benefits
@@ -162,7 +162,7 @@ const IAMMemberPerks = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="flex space-x-2 sm:space-x-2 lg:mr-20">
+                    <div className="flex space-x-2 sm:space-x-2 lg:mr-20 px">
                         <button
                             onClick={handlePrev}
                             className="bg-gray-700 border-[1px] md:border-2 border-white bg-opacity-0 p-4 sm:p-3 rounded-xl hover:bg-yellow-500 transition-colors"

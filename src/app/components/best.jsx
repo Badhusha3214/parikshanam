@@ -27,7 +27,7 @@ const IndustryResources = () => {
   ];
 
   return (
-    <div className="container mx-auto py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
+    <div className="container mx-auto px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
       <div className="text-left mb-12">
         <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 text-pn sm:text-tn md:text-normal rounded-xl text-sm mb-4">
           Our Industry Resources
@@ -84,7 +84,7 @@ const IndustryResources = () => {
                   initial={{ scaleX: 0, originX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute left-[-2px] bottom-0 top-0 w-1 bg-yellow-400"
+                  className="absolute left-[-3px] bottom-0 top-0 w-1 bg-yellow-400"
                 />
               )}
 

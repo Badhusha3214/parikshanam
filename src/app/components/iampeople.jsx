@@ -74,7 +74,7 @@ export default function IamPeople() {
     };
 
     return (
-        <section className="bg-white text-black py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
+        <section className="container mx-auto bg-white text-black pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
             <div className="text-center mb-12 px-4">
                 <h2 className='text-ph sm:text-th lg:text-th xl:text-large font-bold mt-6'>What People Say <span>About IAM</span></h2>
             <p className="text-gray-700 text-pn mt-2 sm:text-tn md:text-normal text-center max-w-2xl mx-auto">
@@ -86,7 +86,7 @@ export default function IamPeople() {
                     ref={swiperRef}
                     spaceBetween={10}
                     slidesPerView={1.2}
-                    centeredSlides={true}
+                    centeredSlides={false}
                     loop={true}
                     breakpoints={{
                         480: {
@@ -111,7 +111,7 @@ export default function IamPeople() {
                 >
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>
-                        <div className="bg-gray-50 text-black p-6 md:py-8 md:px-8 rounded-xl shadow-lg h-full min-h-[400px] md:min-h-[500px] max-w-[450px] mx-auto my-[20px] flex flex-col">
+                        <div className="bg-gray-50 text-black p-6 md:py-8 md:px-8 rounded-xl  h-full min-h-[400px] md:min-h-[500px] max-w-[450px] mx-auto my-[20px] flex flex-col">
                             <div className="flex-shrink-0">
                                 <img
                                     src={testimonial.image}

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const WhyIAM = () => {
     return (
-        <main className="px py-8 py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
+        <main className="container px py-8 pt mx-auto sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
             <div className="text-center mb-10 sm:mb-5 md:mb-16 lg:mb-20">
                 <span className='text-psh sm:text-tsh md:text-normal lg:text-normal xl:text-normal border-2 border-gray-400 px-4 py-2 sm:px-6 sm:py-3 rounded-xl inline-block'>
                     Why IAM?

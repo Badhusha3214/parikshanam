@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1208);
+      setIsMobile(window.innerWidth < 1280);
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -143,9 +143,8 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-black shadow-lg z-50 px">
-      <div className="container mx-auto
-       lg:px-0">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6  lg:px-0">
+        <div className=" flex items-center justify-between h-16">
         <Link href="/" className={`flex-shrink-0 relative z-[11000] ${mobileMenuOpen ? 'hidden' : 'block'}`}>
             <div
               whilehover={{ scale: 1.05 }}
@@ -282,17 +281,17 @@ export default function Navbar() {
           <div
             className={`${
               isMobile ? "hidden" : "flex"
-            } items-center space-x-10`}
+            } items-center space-x-5`}
           >
             <Link
               href="/signup"
-              className="text-yellow-400 font-lg text-lg hover:text-black hover:bg-yellow-400 px-2 py-2 rounded-md"
+              className="text-yellow-400 font-lg text-lg border-2 border-transparent  hover:border-yellow-400  hover:text-black hover:bg-yellow-400 px-6 py-2 rounded-md"
             >
               Sign In
             </Link>
             <Link
               href="/login"
-              className="bg-yellow-400 text-black font-lg text-lg px-6 py-2 rounded-md hover:bg-black hover:text-yellow-400 border-2 border-yellow-400 hover:border-yellow-400 "
+              className="bg-yellow-400 text-black font-lg text-lg px-6 py-2 rounded-md hover:bg-black hover:text-yellow-400 border-2 border-yellow-400 hover:border-yellow-400"
             >
               Join
             </Link>
@@ -306,7 +305,7 @@ export default function Navbar() {
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 hidden" />
               ) : (
                 <Menu className="w-6 h-6" />
               )}
@@ -322,7 +321,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/95 z-[9999]"
+              className="fixed inset-0 h-auto 5 z-[9999]"
               onClick={toggleMobileMenu}
             />
 
@@ -334,7 +333,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween" }}
-              className="fixed inset-0 bg-black text-white w-screen overflow-y-auto z-[10000]"
+              className="fixed inset-0 text-white w-screen overflow-y-auto z-[10000]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between px-4 h-16 border-b border-gray-800">
@@ -357,7 +356,7 @@ export default function Navbar() {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-black">
                 <div className="space-y-4">
                   <NavLink href="/about">About</NavLink>
                   <NavLink href="/members">Members</NavLink>

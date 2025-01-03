@@ -45,7 +45,7 @@ const IAMNextPage = () => {
       </div>
 
       {/* Who IAM? Section - Responsive Layout */}
-      <main className="container mx-auto py sm:py-[20px] lg:py-[30px] xl:py-[50px] xl:pt-[100px]">
+      <main className="container mx-auto px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
         <section className="grid grid-cols-1 lg:grid-cols-2 sm:gap-1 gap-6 lg:gap-12 items-center">
           <div className="lg:order-1 flex justify-center lg:justify-start">
             <Image
@@ -56,24 +56,24 @@ const IAMNextPage = () => {
               className="w-full max-w-md lg:max-w-lg xl:max-w-2xl h-auto xs:-mb-2 md:mb-6 lg:mb-0"
             />
           </div>
-          <div className="lg:order-2 text-center lg:text-left space-y-4">
+          <div className="lg:order-2 text-left space-y-4">
             <h2 className="text-ph sm:text-th lg:text-large xl:text-elarge font-light mb-3">
               Who <span className="font-bold">IAM?</span>
             </h2>
-            <p className="text-pn sm:text-tn md:text-normal text-gray-700 mb-6 mx-auto lg:mx-0 max-w-prose">
+            <p className="text-pn text-left sm:text-tn md:text-normal text-gray-700 mb-6 lg:mx-0 max-w-prose">
               Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
               Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
               Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
               Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis. Venenatis hac per curae velit, molestie maximus et.
             </p>
-            <button className="mx-auto lg:mx-0 flex items-center justify-center bg-yellow-400 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-black hover:text-yellow-400 transition">
+            <button className="flex items-start justify-start bg-yellow-400 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-black hover:text-yellow-400 transition">
               <span>Learn More</span>
               <Image
                 src="/arrow.svg"
                 alt="Learn More"
                 width={190}
                 height={100}
-                className="w-4 sm:w-5 ml-2 h-auto bg-yellow-400 rounded-full "
+                className="w-4 sm:w-5 ml-2 h-auto bg-yellow-400 rounded-full"
               />
             </button>
           </div>
@@ -83,75 +83,75 @@ const IAMNextPage = () => {
       <WhyIAM />
 
       {/* Our Initiatives Section - Responsive Cards */}
-      <div className="container mx-auto py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
-      <div className="text-center mb-16">
-        <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 rounded-xl text-pn sm:text-tn md:text-normal sm mb-4">
-          Our Services
-        </span>
-        <h2 className="text-ph sm:text-th lg:text-large xl:text-large font-bold">Our Initiatives</h2>
-      </div>
+      <div className="container mx-auto px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
+        <div className="text-center mb-16">
+          <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 rounded-xl text-pn sm:text-tn md:text-normal sm mb-4">
+            Our Services
+          </span>
+          <h2 className="text-ph sm:text-th lg:text-large xl:text-large font-bold">Our Initiatives</h2>
+        </div>
 
-      <div className="space-y-16">
-        {[
-          {
-            title: "Expert Talks & Workshops",
-            description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
-            image: "/1.svg",
-            reversed: false
-          },
-          {
-            title: "Social Impact",
-            description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
-            image: "/2.svg",
-            reversed: true
-          },
-          {
-            title: "IAM Responsible Awards",
-            description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
-            image: "/3.svg",
-            reversed: false
-          }
-        ].map((initiative, index) => (
-          <div
-            key={index}
-            className={`grid md:grid-cols-2 gap-8 items-center ${initiative.reversed ? 'md:grid-cols-2-reverse' : ''
-              }`}
-          >
-            <div className={`${initiative.reversed ? 'md:order-2' : ''}`}>
-              <Image
-                src={initiative.image}
-                alt={initiative.title}
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
-            <div className={`${initiative.reversed ? 'md:order-1' : ''}`}>
-              <h3 className="text-pch sm:text-pch lg:text-cdh xl:text-cdh font-bold mb-4">
-                {initiative.title}
-              </h3>
-              <p className="text-pn  md:text-normal sm:text-tn text-gray-700 mb-6">
-                {initiative.description}
-              </p>
-              <button className="flex items-center text-pn sm:text-tn md:text-normal border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-100 transition">
-                Learn More
+        <div className="space-y-16">
+          {[
+            {
+              title: "Expert Talks & Workshops",
+              description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
+              image: "/1.svg",
+              reversed: false
+            },
+            {
+              title: "Social Impact",
+              description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
+              image: "/2.svg",
+              reversed: true
+            },
+            {
+              title: "IAM Responsible Awards",
+              description: "Lacinia ornare magna penatibus adipiscing laoreet tempus. Tortor praesent semper arcu facilisis class eget mauris lobortis.",
+              image: "/3.svg",
+              reversed: false
+            }
+          ].map((initiative, index) => (
+            <div
+              key={index}
+              className={`grid md:grid-cols-2 gap-8 items-center ${initiative.reversed ? 'md:grid-cols-2-reverse' : ''
+                }`}
+            >
+              <div className={`${initiative.reversed ? 'md:order-2' : ''}`}>
                 <Image
-                  src="/NextButton.svg"
-                  alt="arrow"
-                  width={20}
-                  height={20}
-                  className="ml-2"
+                  src={initiative.image}
+                  alt={initiative.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-xl"
                 />
-              </button>
+              </div>
+              <div className={`${initiative.reversed ? 'md:order-1' : ''}`}>
+                <h3 className="text-pch sm:text-pch lg:text-cdh xl:text-cdh font-bold mb-4">
+                  {initiative.title}
+                </h3>
+                <p className="text-pn  md:text-normal sm:text-tn text-gray-700 mb-6">
+                  {initiative.description}
+                </p>
+                <button className="flex items-center text-pn sm:text-tn md:text-normal border-2 border-gray-400 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-100 transition">
+                  Learn More
+                  <Image
+                    src="/NextButton.svg"
+                    alt="arrow"
+                    width={20}
+                    height={20}
+                    className="ml-2"
+                  />
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
 
-      <IndustryResources/>
+      <IndustryResources />
 
-      <main className="container mx-auto  py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
+      <main className="container mx-auto pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-32 items-center">
           {/* Image Column - Responsive Order */}
           <div className="order-2 md:order-1 flex justify-center">
@@ -200,9 +200,9 @@ const IAMNextPage = () => {
       <IAMMemberPerks />
       <SubscriptionSection />
       <section className='px'>
-      <IamPeople />
+        <IamPeople />
       </section>
-      <div className="container mx-auto px py sm:py-[20px] lg:py-[30px] xl:py-[50px]">
+      <div className="container mx-auto px py sm:py-[40px] lg:py-[60px] xl:py-[100px]">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Section - Black Box */}
           <div className="bg-black text-white rounded-2xl p-6 sm:p-8 lg:p-12">
