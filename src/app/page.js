@@ -151,7 +151,7 @@ const IAMNextPage = () => {
 
       <IndustryResources />
 
-      <main className="container mx-auto pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
+      <main className="container mx-auto pt px sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-32 items-center">
           {/* Image Column - Responsive Order */}
           <div className="order-2 md:order-1 flex justify-center">
