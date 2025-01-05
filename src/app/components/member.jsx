@@ -83,7 +83,7 @@ const IAMMemberPerks = () => {
 
     return (
         <main className="w-full  mt-[20px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px] bg-[#121212]">
-            <div className="mx-auto container text-white p-4 sm:p-6 md:p-10 lg:py-[60px] lg:px-20">
+            <div className="mx-auto container text-white py-[40px] sm:py-[40px] lg:py-[60px] px">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 md:mb-10">
                     <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4 sm:mb-0 leading-tight">
                         IAM Member <br className="hidden sm:block" /> Perks & Benefits

@@ -42,6 +42,8 @@ export default function Navbar() {
 
     if (modelsOpen || moreOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
@@ -145,7 +147,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 bg-black shadow-lg z-50 px">
       <div className="container mx-auto px-4 sm:px-6  lg:px-0">
         <div className=" flex items-center justify-between h-16">
-        <Link href="/" className={`flex-shrink-0 relative z-[11000] ${mobileMenuOpen ? 'hidden' : 'block'}`}>
+        <Link href="/" className={`flex-shrink-0 relative z-[11000] ${mobileMenuOpen ? 'hidden sm:block' : 'block'}`}>
             <div
               whilehover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -333,7 +335,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween" }}
-              className="fixed inset-0 text-white w-screen overflow-y-auto z-[10000]"
+              className="fixed top-0 right-0 h-full w-full sm:w-1/2 bg-balck text-white overflow-y-auto z-[10000]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between px-4 h-16 border-b border-gray-800">
@@ -344,7 +346,7 @@ export default function Navbar() {
                     width={120}
                     height={40}
                     priority
-                    className="h-8 w-auto object-contain"
+                    className="h-8 w-auto object-contain sm:hidden"
                   />
                 </Link>
                 <button

@@ -83,7 +83,7 @@ const IAMNextPage = () => {
       <WhyIAM />
 
       {/* Our Initiatives Section - Responsive Cards */}
-      <div className="container mx-auto px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
+      <div className="container mx-auto px  pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
         <div className="text-center mb-16">
           <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 rounded-xl text-pn sm:text-tn md:text-normal sm mb-4">
             Our Services
@@ -151,7 +151,7 @@ const IAMNextPage = () => {
 
       <IndustryResources />
 
-      <main className="container mx-auto pt px sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
+      <main className="container mx-auto pt px sm:px-0 sm:pt-[40px] lg:pt-[60px] xl:pt-[100px] pb-[40px]">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-32 items-center">
           {/* Image Column - Responsive Order */}
           <div className="order-2 md:order-1 flex justify-center">

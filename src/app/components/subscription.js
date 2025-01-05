@@ -3,7 +3,7 @@ import React from 'react';
 
 const SubscriptionSection = () => {
   return (
-    <div className="container mx-auto px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
+    <div className="container mx-auto px sm:px-0  pt-[40px] sm:pt-[80px] lg:pt-[60px] xl:pt-[100px]">
       <div className="text-center mb-12">
         <h2 className="text-ph sm:text-th lg:text-mid xl:text-large font-bold mb-4">Subscribe to IAM</h2>
         <p className="text-gray-700 text-pn sm:text-tn md:text-normal max-w-2xl mx-auto">

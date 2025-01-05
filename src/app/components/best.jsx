@@ -27,7 +27,7 @@ const IndustryResources = () => {
   ];
 
   return (
-    <div className="container mx-auto px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
+    <div className="container mx-auto px sm:px pt sm:pt-[40px] lg:pt-[60px] xl:pt-[100px]">
       <div className="text-left mb-12">
         <span className="inline-block border-2 border-gray-400 font-bold px-6 py-2 text-pn sm:text-tn md:text-normal rounded-xl text-sm mb-4">
           Our Industry Resources
